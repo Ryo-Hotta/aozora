@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Claude Code
+.claude/*
+!.claude/commands/
+!.claude/settings.json
+.claude/memory/
+.claude/settings.local.json
