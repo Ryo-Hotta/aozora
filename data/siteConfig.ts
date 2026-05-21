@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "青空教室は、学生が「論理的に考え抜く力」を体験を通して身につけるための教育プロジェクトです。",
   url: "https://aozora-classroom.pages.dev",
-  email: "contact@terraise.co.jp",
+  email: "info@openairclass.jp",
   org: {
     representative: "堀田",
     foundedYear: 2026,
