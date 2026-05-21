@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Cpu, Users, Sparkles, Trophy } from "lucide-react";
-import { siteConfig } from "@/data/siteConfig";
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-6xl px-5 pt-20 pb-24 md:pt-28 md:pb-32">
           <p className="text-sky-700 font-semibold tracking-widest text-sm mb-4">
-            OPEN AIR CLASSROOM｜2026.6.13 富士山麓
+            OPEN AIR CLASSROOM｜2026年6月 開催予定
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-900">
             256人で、<br className="md:hidden" />
@@ -24,24 +23,22 @@ export default function Home() {
             ギネス世界記録への公式挑戦を通じて、「論理で世界を動かせる」という原体験を持ち帰ります。
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href={siteConfig.applyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
             >
-              参加申込フォームへ
+              学校・取材・協賛のお問い合わせ
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
             <Link
               href="/events"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
             >
-              開催概要を見る
+              開催情報を見る
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500">
-            参加費 0円｜定員256名（先着順）｜申込締切 2026年6月5日（金）
+            参加費 無料｜理系中高生256名（＝1バイト）規模｜2026年6月 開催予定（詳細は調整中）
           </p>
         </div>
       </section>
@@ -183,11 +180,11 @@ export default function Home() {
           <div className="relative">
             <p className="text-sky-200 text-sm font-semibold tracking-widest mb-3">UPCOMING EVENT</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              2026.6.13｜<br className="md:hidden" />富士山麓 1Day
+              2026年6月｜<br className="md:hidden" />中学校・高校で出張開催（予定）
             </h2>
             <p className="mt-6 max-w-2xl text-sky-100 leading-relaxed">
-              青空教室の旗艦イベント。理系中高生256名（＝1バイト）・参加費無料・1日完結型。
-              タイムスケジュール／持ち物／会場詳細は開催情報ページに掲載しています。
+              青空教室の旗艦イベント。理系中高生256名（＝1バイト）規模・参加費無料・1日完結型。
+              学校コラボ型での開催を準備中です。会場・日程の詳細は確定次第ご案内します。
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -197,15 +194,13 @@ export default function Home() {
                 開催情報を見る
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <a
-                href={siteConfig.applyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 hover:bg-white/10 transition"
               >
-                申込フォームへ
+                お問い合わせ
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -216,26 +211,18 @@ export default function Home() {
         <div className="text-center">
           <Trophy className="w-10 h-10 mx-auto text-sky-600 mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            参加・取材・協賛のご相談はこちら
+            学校・取材・協賛のご相談はこちら
           </h2>
           <p className="mt-4 text-slate-600">
-            学校・教員・保護者・メディアからのお問い合わせも歓迎しています。
+            開催校としてのご検討、教員・保護者・メディアからのお問い合わせも歓迎しています。
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href={siteConfig.applyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition"
-            >
-              参加申込
-              <ArrowRight className="w-4 h-4" />
-            </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition"
             >
               お問い合わせ
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
