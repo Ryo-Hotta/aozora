@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Brain, Users, Sparkles, Target } from "lucide-react";
+import { ArrowRight, Cpu, Users, Sparkles, Trophy } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function Home() {
@@ -13,30 +13,36 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-6xl px-5 pt-20 pb-24 md:pt-28 md:pb-32">
           <p className="text-sky-700 font-semibold tracking-widest text-sm mb-4">
-            AOZORA CLASSROOM
+            OPEN AIR CLASSROOM｜2026.6.13 富士山麓
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-900">
-            考える力で、<br className="md:hidden" />
-            世界を動かす。
+            128人で、<br className="md:hidden" />
+            ひとつのコンピュータをつくる。
           </h1>
           <p className="mt-6 text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed">
-            青空教室は、学生が「論理的に考え抜く力」を、本物の挑戦と仲間との対話を通じて身につけるための、体験型教育プロジェクトです。
+            理系中高生128名が、自分自身を「1ビット」として動き、屋外で“動く論理回路”を実演する1日。
+            ギネス世界記録への公式挑戦を通じて、「論理で世界を動かせる」という原体験を持ち帰ります。
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/events"
+            <a
+              href={siteConfig.applyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
             >
-              開催中のイベントを見る
+              参加申込フォームへ
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
             <Link
-              href="/about"
+              href="/events"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
             >
-              団体について
+              開催概要を見る
             </Link>
           </div>
+          <p className="mt-6 text-sm text-slate-500">
+            参加費 0円｜定員128名（先着順）｜申込締切 2026年6月5日（金）
+          </p>
         </div>
       </section>
 
@@ -46,25 +52,25 @@ export default function Home() {
           <div>
             <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3">MISSION</p>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-snug">
-              「考える」を、<br />一生使える力にする。
+              「論理で世界は動かせる」<br />
+              それを身体で覚える。
             </h2>
             <p className="mt-6 text-slate-700 leading-relaxed">
-              情報は手の中にあるのに、私たちは選択に迷い、決断に揺れる。
-              青空教室は、知識を増やすことではなく、思考のプロセスそのものを鍛えることに焦点を当てています。
+              情報を浴びるほど受け取れる時代に、いちばん磨きにくいのは「自分の頭で考え抜く力」です。
+              青空教室は、知識を増やすことではなく、思考と協働のプロセスを身体に刻むことに焦点を当てます。
             </p>
             <p className="mt-4 text-slate-700 leading-relaxed">
-              目的を定め、達成条件を洗い出し、現在地を確かめ、突破口を導く。
-              この4ステップを、机の上ではなく、本物の挑戦の中で身につけてもらいます。
+              128人が同期して動くことで、はじめて1台のコンピュータが立ち上がる。
+              一人では小さくても、論理と協力で巨大な秩序を生成できる――その実感を、原体験として持ち帰ってもらいます。
             </p>
           </div>
           <div className="rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-sky-100 p-8 md:p-10">
-            <h3 className="font-bold text-slate-900 mb-6">論理的思考の4ステップ</h3>
-            <ol className="space-y-4">
+            <h3 className="font-bold text-slate-900 mb-6">届けたい3つの価値</h3>
+            <ol className="space-y-5">
               {[
-                { n: 1, t: "目的を定義する", d: "何のためにやるのかを言語化する" },
-                { n: 2, t: "達成条件を洗い出す", d: "成功とは何かを具体にする" },
-                { n: 3, t: "現在地を確認する", d: "今どこまで来ているかを把握する" },
-                { n: 4, t: "突破方法を導き出す", d: "ギャップを埋める打ち手を作る" },
+                { n: 1, t: "協力の力を体で理解する", d: "128人が同期して、はじめて巨大な知性が立ち上がることを実演する" },
+                { n: 2, t: "論理的思考を人生の道具にする", d: "ゴール／条件／現在地／差分の4ステップを、机ではなく屋外で使い切る" },
+                { n: 3, t: "世界一に挑んだ原体験", d: "ギネス世界記録への公式挑戦を、自分たちの手で成立させる" },
               ].map((s) => (
                 <li key={s.n} className="flex gap-4">
                   <span className="shrink-0 w-9 h-9 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center">
@@ -81,68 +87,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* 5 Steps */}
       <section className="bg-slate-50 border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3 text-center">VALUES</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
-            私たちが大切にしていること
+          <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3 text-center">PROGRAM</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
+            5ステップで「秩序の生成」を体験する
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <p className="text-center text-slate-600 max-w-2xl mx-auto mb-12">
+            2進数の自分から始まり、加算器を経て、最後はセル・オートマトンへ。
+            128人の身体だけで、計算と自律世界を順番に立ち上げます。
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
-              {
-                icon: Brain,
-                title: "考え抜く",
-                desc: "答えを暗記するのではなく、自分の頭で論理を組み立てる経験を最優先します。",
-              },
-              {
-                icon: Users,
-                title: "共に成功する",
-                desc: "競い合うのではなく、仲間と一緒に同じ山を登る共同体験を設計します。",
-              },
-              {
-                icon: Sparkles,
-                title: "本気で挑む",
-                desc: "妥協のない目標を掲げ、達成までの過程そのものを学びにします。",
-              },
-            ].map((v) => (
+              { n: 1, t: "2進数", d: "自分自身を0か1で表現する" },
+              { n: 2, t: "加算器", d: "128人で4ビットの足し算を実演する" },
+              { n: 3, t: "崩壊", d: "1人ズレるとどうなるかを観察する" },
+              { n: 4, t: "修正", d: "エラーを自律的に直す仕組みを試す" },
+              { n: 5, t: "自律世界", d: "セル・オートマトンを成立させる" },
+            ].map((s) => (
               <div
-                key={v.title}
-                className="bg-white rounded-2xl p-7 border border-slate-200 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-600/5 transition"
+                key={s.n}
+                className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-600/5 transition text-center"
               >
-                <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-4">
-                  <v.icon className="w-6 h-6" />
+                <div className="w-10 h-10 mx-auto rounded-full bg-sky-600 text-white font-bold flex items-center justify-center mb-3">
+                  {s.n}
                 </div>
-                <h3 className="font-bold text-slate-900 text-lg mb-2">{v.title}</h3>
-                <p className="text-slate-600 leading-relaxed text-sm">{v.desc}</p>
+                <p className="font-bold text-slate-900 mb-2">Step {s.n}：{s.t}</p>
+                <p className="text-xs text-slate-600 leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
+          <p className="mt-10 text-center text-sm text-slate-500">
+            最終ステップでギネス世界記録「人間によるセル・オートマトン実演 最大規模」へ公式挑戦
+          </p>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3 text-center">VALUES</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+          私たちが大切にしていること
+        </h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { icon: Cpu, title: "考え抜く", desc: "答えを暗記するのではなく、自分の頭で論理を組み立てる経験を最優先します。" },
+            { icon: Users, title: "共に動く", desc: "競争ではなく、128人で同じ秩序を生成する共同体験を設計します。" },
+            { icon: Sparkles, title: "本気で挑む", desc: "妥協のないゴール（ギネス挑戦）を掲げ、達成までの過程そのものを学びにします。" },
+          ].map((v) => (
+            <div
+              key={v.title}
+              className="bg-white rounded-2xl p-7 border border-slate-200 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-600/5 transition"
+            >
+              <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-4">
+                <v.icon className="w-6 h-6" />
+              </div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">{v.title}</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">{v.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Event teaser */}
-      <section className="mx-auto max-w-6xl px-5 py-20">
+      <section className="mx-auto max-w-6xl px-5 pb-20">
         <div className="rounded-3xl bg-gradient-to-br from-sky-900 to-sky-700 text-white p-10 md:p-16 relative overflow-hidden">
           <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-sky-400/20 blur-3xl" />
           <div className="absolute -left-10 -bottom-10 w-60 h-60 rounded-full bg-sky-300/20 blur-3xl" />
           <div className="relative">
             <p className="text-sky-200 text-sm font-semibold tracking-widest mb-3">UPCOMING EVENT</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              128人で、<br className="md:hidden" />世界一を取りに行く2日間。
+              2026.6.13｜<br className="md:hidden" />富士山麓 1Day
             </h2>
             <p className="mt-6 max-w-2xl text-sky-100 leading-relaxed">
-              論理的思考を学ぶ最強の方法は、本気の挑戦を共にすることです。
-              2026年6月13日〜14日、私たちはギネス世界記録への挑戦と、深夜の対話を通じて、参加者と一緒に「考える」の原体験をつくります。
+              青空教室の旗艦イベント。理系中高生128名・参加費無料・1日完結型。
+              タイムスケジュール／持ち物／会場詳細は開催情報ページに掲載しています。
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/events"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-sky-700 font-semibold hover:bg-sky-50 transition"
               >
-                詳細を見る
+                開催情報を見る
                 <ArrowRight className="w-4 h-4" />
               </Link>
+              <a
+                href={siteConfig.applyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 hover:bg-white/10 transition"
+              >
+                申込フォームへ
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -151,20 +189,30 @@ export default function Home() {
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-5 pb-24">
         <div className="text-center">
-          <Target className="w-10 h-10 mx-auto text-sky-600 mb-4" />
+          <Trophy className="w-10 h-10 mx-auto text-sky-600 mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            一緒に、考える力を育てませんか。
+            参加・取材・協賛のご相談はこちら
           </h2>
           <p className="mt-4 text-slate-600">
-            参加申込・取材・パートナーシップなど、お気軽にお問い合わせください。
+            学校・教員・保護者・メディアからのお問い合わせも歓迎しています。
           </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition"
-          >
-            お問い合わせ
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href={siteConfig.applyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition"
+            >
+              参加申込
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
+            >
+              お問い合わせ
+            </Link>
+          </div>
         </div>
       </section>
     </>

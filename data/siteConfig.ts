@@ -1,11 +1,13 @@
 export const siteConfig = {
   name: "青空教室",
-  nameEn: "Aozora Classroom",
-  tagline: "考える力で、世界を動かす。",
+  nameEn: "Open Air Classroom",
+  tagline: "128人で、ひとつのコンピュータをつくる。",
   description:
-    "青空教室は、学生が「論理的に考え抜く力」を体験を通して身につけるための教育プロジェクトです。",
-  url: "https://aozora-classroom.pages.dev",
+    "青空教室は、理系中高生128名が「論理と協働で世界を動かす」原体験を持ち帰るための、1日完結型の体験教育プロジェクトです。2026年6月、富士山麓にて開催。",
+  url: "https://openairclass.jp",
   email: "info@openairclass.jp",
+  applyUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSexqugMop4jOW_IWxJNp_OsdeefwCvhILMC79O9LC1C0Kr2BA/viewform",
   org: {
     representative: "堀田",
     foundedYear: 2026,
@@ -16,8 +18,8 @@ export const siteConfig = {
   nav: [
     { href: "/", label: "ホーム" },
     { href: "/about", label: "団体について" },
-    { href: "/activities", label: "活動内容" },
-    { href: "/events", label: "イベント" },
+    { href: "/activities", label: "プログラム" },
+    { href: "/events", label: "開催情報" },
     { href: "/contact", label: "お問い合わせ" },
   ],
 };
