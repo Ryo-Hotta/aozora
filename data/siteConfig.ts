@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "青空教室",
   nameEn: "Open Air Classroom",
-  tagline: "128人で、ひとつのコンピュータをつくる。",
+  tagline: "256人で、1バイトのコンピュータをつくる。",
   description:
-    "青空教室は、理系中高生128名が「論理と協働で世界を動かす」原体験を持ち帰るための、1日完結型の体験教育プロジェクトです。2026年6月、富士山麓にて開催。",
+    "青空教室は、理系中高生256名（＝1バイト）が「論理と協働で世界を動かす」原体験を持ち帰るための、1日完結型の体験教育プロジェクトです。2026年6月、富士山麓にて開催。",
   url: "https://openairclass.jp",
   email: "info@openairclass.jp",
   applyUrl:

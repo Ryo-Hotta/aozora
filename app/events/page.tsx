@@ -7,14 +7,14 @@ export const metadata = { title: "開催情報" };
 const schedule = [
   { time: "09:00", title: "受付開始", body: "富士山麓・指定会場にて受付。集合写真の準備を行います。" },
   { time: "10:00", title: "オリエンテーション", body: "企画趣旨・安全管理・1日の流れの共有。ギネス認定の流れを説明。" },
-  { time: "10:30", title: "Step 1：2進数で自分を表現する", body: "128名それぞれが0か1の状態を持つ「人間ビット」となり、信号の伝達を体感。" },
-  { time: "11:30", title: "Step 2：人間4ビット加算器の組み立て", body: "全員で論理ゲートを組み、屋外で4ビットの足し算を実演。" },
+  { time: "10:30", title: "Step 1：2進数で自分を表現する", body: "256名それぞれが0か1の状態を持つ「人間ビット」となり、信号の伝達を体感。" },
+  { time: "11:30", title: "Step 2：人間二進数計算機（8ビット加算器）の組み立て", body: "256人で論理ゲートを組み、屋外で1バイト（8ビット）の二進数加算を実演。Carry伝播を体で覚える。" },
   { time: "13:00", title: "昼食・休憩", body: "お弁当を支給。芝生エリアで自由交流。" },
   { time: "14:00", title: "Step 3：崩壊実験", body: "わざと1人がズレることで、全体がどう壊れるかを観察。" },
   { time: "14:45", title: "Step 4：自律的な修正", body: "エラーを自分たちで検知し、修復する仕組みを試行。" },
   { time: "15:30", title: "休憩", body: "ドリンク・軽食。スタッフによる安全確認。" },
-  { time: "16:00", title: "Step 5：セル・オートマトン", body: "128人で自律世界を成立させる本番リハーサル。" },
-  { time: "17:00", title: "★ ギネス世界記録 公式挑戦", body: "「人間によるセル・オートマトン実演 最大規模」の認定挑戦本番。" },
+  { time: "16:00", title: "Step 5：セル・オートマトン（教育演目）", body: "シンプルなルールから複雑な秩序が立ち現れる「ライフゲーム」を256人の身体で実演。ギネス本番（17:00）を前に、創発と自己組織化を全員で目撃します。" },
+  { time: "17:00", title: "★ ギネス世界記録 公式挑戦", body: "「256人による人間二進数計算機（1バイト演算）」の認定挑戦本番。" },
   { time: "17:45", title: "結果発表・記念撮影", body: "認定員から結果発表。集合写真・ドローン空撮。" },
   { time: "18:15", title: "振り返り・宣言", body: "少人数グループで体験を言語化し、自分の人生にどう繋げるかを宣言。" },
   { time: "19:00", title: "解散", body: "解散後の送迎導線をスタッフが案内します。" },
@@ -42,20 +42,20 @@ export default function EventsPage() {
               FEATURED EVENT
             </span>
             <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">
-              128人で挑む、<br />人間セル・オートマトンの1日
+              256人で挑む、<br />人間二進数計算機（1バイト）の1日
             </h2>
             <p className="mt-6 text-sky-100 leading-relaxed max-w-2xl">
-              理系中高生128名が、自分自身を「1ビット」として動き、屋外で“動く論理回路”を実演します。
-              5ステップで秩序の生成を体験し、最終ステップでギネス世界記録への公式挑戦を行います。
+              理系中高生256名（＝1バイト）が、自分自身を「1ビット」として動き、屋外で“動く論理回路”を実演します。
+              5ステップで秩序の生成を体験し、Step2「人間二進数計算機」でギネス世界記録への公式挑戦を行います。
             </p>
 
             <div className="mt-10 grid sm:grid-cols-2 gap-5">
               {[
                 { icon: Calendar, label: "開催日", value: "2026年6月13日（土）9:00〜19:00" },
                 { icon: MapPin, label: "会場", value: "富士山麓（詳細調整中・確定後ご案内）" },
-                { icon: Users, label: "定員", value: "128名（理系中高生・先着順）" },
+                { icon: Users, label: "定員", value: "256名（理系中高生・先着順）" },
                 { icon: JapaneseYen, label: "参加費", value: "無料（昼食・ドリンク付き）" },
-                { icon: Trophy, label: "挑戦内容", value: "ギネス世界記録 公式申請（セル・オートマトン）" },
+                { icon: Trophy, label: "挑戦内容", value: "ギネス世界記録 公式申請（人間二進数計算機・1バイト）" },
                 { icon: Clock, label: "申込締切", value: "2026年6月5日（金）23:59" },
               ].map((i) => (
                 <div key={i.label} className="flex gap-4">
@@ -150,7 +150,7 @@ export default function EventsPage() {
       {/* Apply CTA */}
       <section className="mx-auto max-w-6xl px-5 pb-24">
         <div className="rounded-3xl bg-slate-900 text-white p-10 md:p-14 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">先着128名・締切は6月5日（金）</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">先着256名・締切は6月5日（金）</h2>
           <p className="text-slate-300 mb-8">迷ったら、まず申し込みから。当日の質問は事前にメールでも受け付けます。</p>
           <a
             href={siteConfig.applyUrl}

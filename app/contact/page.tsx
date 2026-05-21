@@ -22,7 +22,7 @@ export default function ContactPage() {
           <p className="text-sky-100 text-sm font-semibold tracking-widest mb-2">FOR PARTICIPANTS</p>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">参加申込はこちら</h2>
           <p className="text-sky-50 leading-relaxed mb-6">
-            理系中高生128名限定・参加費無料。締切は2026年6月5日（金）23:59、定員に達し次第締切ります。
+            理系中高生256名（＝1バイト）限定・参加費無料。締切は2026年6月5日（金）23:59、定員に達し次第締切ります。
           </p>
           <a
             href={siteConfig.applyUrl}
