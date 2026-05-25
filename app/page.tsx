@@ -12,22 +12,23 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-6xl px-5 pt-20 pb-24 md:pt-28 md:pb-32">
           <p className="text-sky-700 font-semibold tracking-widest text-sm mb-4">
-            OPEN AIR CLASSROOM｜2026年6月 開催予定
+            OPEN AIR CLASSROOM｜2026年6月21日（日）開催
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-900">
             256人で、<br className="md:hidden" />
-            1バイトのコンピュータをつくる。
+            世界最大級の人間コンピュータをつくる。
           </h1>
           <p className="mt-6 text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed">
-            理系中高生256名（＝1バイト）が、自分自身を「1ビット」として動き、屋外で“動く論理回路”を実演する1日。
-            ギネス世界記録への公式挑戦を通じて、「論理で世界を動かせる」という原体験を持ち帰ります。
+            256人（＝1バイト）の中高生・大学生が自分自身を「1ビット」として動き、
+            屋外で世界最大級の人間二進数乗算機を実演する1日。
+            世界初の規模での公式記録挑戦を通じて、「論理で世界を動かせる」原体験を持ち帰ります。
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
             >
-              学校・取材・協賛のお問い合わせ
+              参加申込・協賛・取材のお問い合わせ
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
@@ -38,7 +39,7 @@ export default function Home() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500">
-            参加費 無料｜理系中高生256名（＝1バイト）規模｜2026年6月 開催予定（詳細は調整中）
+            参加費 無料｜2026年6月21日（日）｜東京都内（屋外メイン／雨天時は屋内）｜事前登録制
           </p>
         </div>
       </section>
@@ -67,7 +68,7 @@ export default function Home() {
               {[
                 { n: 1, t: "協力の力を体で理解する", d: "256人が同期して、はじめて巨大な知性が立ち上がることを実演する" },
                 { n: 2, t: "論理的思考を人生の道具にする", d: "ゴール／条件／現在地／差分の4ステップを、机ではなく屋外で使い切る" },
-                { n: 3, t: "世界一に挑んだ原体験", d: "ギネス世界記録への公式挑戦を、自分たちの手で成立させる" },
+                { n: 3, t: "世界初の挑戦に立ち会う", d: "世界最大級の人間二進数乗算機を、自分たちの手で成立させる" },
               ].map((s) => (
                 <li key={s.n} className="flex gap-4">
                   <span className="shrink-0 w-9 h-9 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center">
@@ -84,24 +85,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5 Steps */}
+      {/* 3 Steps */}
       <section className="bg-slate-50 border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-5 py-20">
           <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3 text-center">PROGRAM</p>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
-            5ステップで「秩序の生成」を体験する
+            3ステップで「秩序の生成」を体験する
           </h2>
           <p className="text-center text-slate-600 max-w-2xl mx-auto mb-12">
-            2進数の自分から始まり、Step2「人間二進数計算機」でギネス世界記録に公式挑戦。
-            その後、崩壊→修正→自律世界（セル・オートマトン）へと、256人の身体だけで秩序の生成を体験します。
+            2進数の自分から始まり、Step2「人間二進数乗算機」で世界最大級の公式挑戦。
+            最後にセル・オートマトンで自律世界の立ち上がりまでを、256人の身体で体験します。
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { n: 1, t: "2進数", d: "自分自身を0か1で表現する", highlight: false },
-              { n: 2, t: "人間計算機", d: "256人で8ビット（1バイト）の二進数加算を実演する", highlight: true },
-              { n: 3, t: "崩壊", d: "1人ズレるとどうなるかを観察する", highlight: false },
-              { n: 4, t: "修正", d: "エラーを自律的に直す仕組みを試す", highlight: false },
-              { n: 5, t: "自律世界", d: "セル・オートマトンを成立させる（教育演目）", highlight: false },
+              { n: 1, t: "2進数で自分を表現する", d: "256人が0/1の人間ビットになり、信号の伝達を体得する", highlight: false },
+              { n: 2, t: "人間二進数乗算機（9bit × 9bit）", d: "Wallace tree乗算器を256人で組み上げ、最大511×511の乗算を実演する", highlight: true },
+              { n: 3, t: "セル・オートマトン", d: "シンプルなルールから秩序が立ち現れる瞬間を、256人で目撃する", highlight: false },
             ].map((s) => (
               <div
                 key={s.n}
@@ -113,7 +112,7 @@ export default function Home() {
               >
                 {s.highlight && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber-400 text-slate-900 text-[10px] font-bold tracking-wider whitespace-nowrap">
-                    ★ GUINNESS
+                    ★ WORLD-FIRST
                   </span>
                 )}
                 <div
@@ -131,8 +130,8 @@ export default function Home() {
                 <p
                   className={
                     s.highlight
-                      ? "text-xs text-sky-50 leading-relaxed"
-                      : "text-xs text-slate-600 leading-relaxed"
+                      ? "text-sm text-sky-50 leading-relaxed"
+                      : "text-sm text-slate-600 leading-relaxed"
                   }
                 >
                   {s.d}
@@ -141,7 +140,7 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-10 text-center text-sm text-slate-500">
-            Step2「人間二進数計算機」でギネス世界記録（256人による1バイト演算実演）へ公式挑戦
+            Step2「人間二進数乗算機」で世界最大級の公式記録に挑戦（256人によるWallace tree方式）
           </p>
         </div>
       </section>
@@ -156,7 +155,7 @@ export default function Home() {
           {[
             { icon: Cpu, title: "考え抜く", desc: "答えを暗記するのではなく、自分の頭で論理を組み立てる経験を最優先します。" },
             { icon: Users, title: "共に動く", desc: "競争ではなく、256人で同じ秩序を生成する共同体験を設計します。" },
-            { icon: Sparkles, title: "本気で挑む", desc: "妥協のないゴール（ギネス挑戦）を掲げ、達成までの過程そのものを学びにします。" },
+            { icon: Sparkles, title: "本気で挑む", desc: "妥協のないゴール（世界最大級の挑戦）を掲げ、達成までの過程そのものを学びにします。" },
           ].map((v) => (
             <div
               key={v.title}
@@ -180,11 +179,11 @@ export default function Home() {
           <div className="relative">
             <p className="text-sky-200 text-sm font-semibold tracking-widest mb-3">UPCOMING EVENT</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              2026年6月｜<br className="md:hidden" />中学校・高校で出張開催（予定）
+              2026年6月21日（日）｜<br className="md:hidden" />東京都内で開催
             </h2>
             <p className="mt-6 max-w-2xl text-sky-100 leading-relaxed">
-              青空教室の旗艦イベント。理系中高生256名（＝1バイト）規模・参加費無料・1日完結型。
-              学校コラボ型での開催を準備中です。会場・日程の詳細は確定次第ご案内します。
+              青空教室の旗艦イベント。256人規模（＝1バイト）・参加費無料・1日完結型。
+              屋外メイン（雨天時は屋内）、共同名義での開催です。事前登録制での参加申込を順次受け付けています。
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -198,7 +197,7 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 hover:bg-white/10 transition"
               >
-                お問い合わせ
+                参加申込・お問い合わせ
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -211,10 +210,10 @@ export default function Home() {
         <div className="text-center">
           <Trophy className="w-10 h-10 mx-auto text-sky-600 mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            学校・取材・協賛のご相談はこちら
+            参加申込・協賛・取材のご相談はこちら
           </h2>
           <p className="mt-4 text-slate-600">
-            開催校としてのご検討、教員・保護者・メディアからのお問い合わせも歓迎しています。
+            事前登録での参加申込のほか、協賛（人材アクセス・PR）、メディア取材、運営参画のお問い合わせも歓迎しています。
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

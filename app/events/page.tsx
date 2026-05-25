@@ -11,8 +11,7 @@ export default function EventsPage() {
           <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3">EVENTS</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900">開催情報</h1>
           <p className="mt-5 text-lg text-slate-700 max-w-2xl">
-            2026年6月、中学校・高校との連携による1日集中型プログラムとして開催準備中です。
-            会場・日程は開催校との調整完了後に正式アナウンスします。
+            2026年6月21日（日）、東京都内（屋外メイン／雨天時は屋内）で1日完結型のイベントを開催します。事前登録制での参加申込を受け付けています。
           </p>
         </div>
       </section>
@@ -26,20 +25,20 @@ export default function EventsPage() {
               UPCOMING EVENT
             </span>
             <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">
-              256人で挑む、<br />人間二進数計算機（1バイト）の1日
+              256人で挑む、<br />世界最大級の人間二進数乗算機
             </h2>
             <p className="mt-6 text-sky-100 leading-relaxed max-w-2xl">
-              理系中高生256名（＝1バイト）が、自分自身を「1ビット」として動き、屋外で“動く論理回路”を実演します。
-              5ステップで秩序の生成を体験し、Step2「人間二進数計算機」でギネス世界記録への公式挑戦を行います。
+              256人（＝1バイト）が自分自身を「1ビット」として動き、屋外で9bit × 9bitの二進数乗算（最大511×511）を実演します。
+              Wallace tree方式の乗算器を人体のみで構成する、世界初の規模での公式記録挑戦です。
             </p>
 
             <div className="mt-10 grid sm:grid-cols-2 gap-5">
               {[
-                { icon: Calendar, label: "開催時期", value: "2026年6月（土曜・1日完結型／日程調整中）" },
-                { icon: MapPin, label: "開催形式", value: "中学校・高校と連携した出張開催（会場調整中）" },
-                { icon: Users, label: "規模", value: "理系中高生256名（＝1バイト）" },
-                { icon: JapaneseYen, label: "参加費", value: "無料（学校教育の一環として提供）" },
-                { icon: Trophy, label: "挑戦内容", value: "ギネス世界記録 公式申請（人間二進数計算機・1バイト）" },
+                { icon: Calendar, label: "開催日", value: "2026年6月21日（日）｜1日完結型" },
+                { icon: MapPin, label: "開催地", value: "東京都内（屋外メイン／雨天時は屋内に切替）" },
+                { icon: Users, label: "規模", value: "総勢300人規模（演算コア256人＋運営・観客）" },
+                { icon: JapaneseYen, label: "参加費", value: "無料（事前登録制）" },
+                { icon: Trophy, label: "挑戦内容", value: "世界最大級の人間二進数乗算機（256人・Wallace tree方式）" },
               ].map((i) => (
                 <div key={i.label} className="flex gap-4">
                   <div className="shrink-0 w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center">
@@ -58,27 +57,29 @@ export default function EventsPage() {
                 href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-sky-700 font-semibold hover:bg-sky-50 transition"
               >
-                開催校・取材・協賛のご相談
+                参加申込・協賛・取材のご相談
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+
+            <p className="mt-6 text-xs text-sky-200 leading-relaxed max-w-2xl">
+              ※ 公式記録機関との手続き進行中のため、現時点では「世界最大級」「世界初」等の表記でご案内しています。正式名称は契約締結後に本ページで公開します。
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 5ステップ概要 */}
+      {/* 3ステップ概要 */}
       <section className="mx-auto max-w-4xl px-5 py-16">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">プログラム構成（概要）</h2>
         <p className="text-sm text-slate-500 mb-8">
-          1日完結・5ステップ。タイムスケジュールの詳細は開催校との調整完了後に公開します。
+          1日完結・3ステップ。詳細タイムスケジュールは事前登録者へ別途ご案内します。
         </p>
         <ol className="space-y-3">
           {[
-            { n: "Step 1", title: "2進数で自分を表現する", body: "256名それぞれが0か1の状態を持つ「人間ビット」となり、信号の伝達を体感。" },
-            { n: "Step 2", title: "人間二進数計算機（8ビット加算器）★ ギネス挑戦", body: "256人で論理ゲートを組み、屋外で1バイト（8ビット）の二進数加算を実演。Carry伝播を体で覚える。" },
-            { n: "Step 3", title: "崩壊実験", body: "わざと1人がズレることで、全体がどう壊れるかを観察。" },
-            { n: "Step 4", title: "自律的な修正", body: "エラーを自分たちで検知し、修復する仕組みを試行。" },
-            { n: "Step 5", title: "セル・オートマトン（教育演目）", body: "シンプルなルールから複雑な秩序が立ち現れる「ライフゲーム」を256人の身体で実演。" },
+            { n: "Step 1", title: "2進数で自分を表現する", body: "256人それぞれが0/1の状態を持つ「人間ビット」となり、信号の伝達を体感。" },
+            { n: "Step 2", title: "人間二進数乗算機（9bit × 9bit）★ 世界最大級の公式挑戦", body: "Wallace tree乗算器を256人で組み立て、9bit×9bit（最大511×511＝261,121）の二進数乗算を実演。FA/HAレベルから人体で構成する、世界初の規模での挑戦。" },
+            { n: "Step 3", title: "セル・オートマトン（教育演目）", body: "ライフゲームのシンプルなルールから複雑な秩序が立ち上がる瞬間を、256人の身体で実演。" },
           ].map((s) => (
             <li
               key={s.n}
@@ -99,12 +100,13 @@ export default function EventsPage() {
       {/* Notice */}
       <section className="mx-auto max-w-4xl px-5 pb-24">
         <div className="rounded-2xl bg-sky-50 border border-sky-100 p-7">
-          <h3 className="font-bold text-slate-900 mb-2">開催校・パートナーを募集しています</h3>
-          <p className="text-sm text-slate-700 leading-relaxed">
-            青空教室は、開催校（中学校・高校）との連携によって生徒256名規模で実施するプログラムです。
-            「自校で開催を検討したい」「協賛・取材として関わりたい」などのご相談はお問い合わせページよりご連絡ください。
-            開催校が確定し次第、日程・会場の詳細を本ページに掲載します。
-          </p>
+          <h3 className="font-bold text-slate-900 mb-2">参加者・協賛・運営メンバーを募集しています</h3>
+          <ul className="text-sm text-slate-700 leading-relaxed space-y-2 list-disc list-inside">
+            <li>参加者（中高生・大学生・社会人）：事前登録制で受付中</li>
+            <li>協賛企業：人材アクセス（採用接点）・PR・公式記録掲載などの価値提供</li>
+            <li>運営ボランティア：当日運営・準備リハーサル（5/27〜6/20）への参画</li>
+            <li>取材・メディア：当日撮影／事前取材のご相談</li>
+          </ul>
           <div className="mt-5">
             <Link
               href="/contact"
