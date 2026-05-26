@@ -16,6 +16,7 @@ export default function AboutPage() {
           <div className="mt-10">
             <PhotoFrame
               aspect="wide"
+              src="/rehearsal.png"
               caption="活動風景：リハーサルの一場面"
               prompt={`【プロンプト】屋外、夕方の柔らかい光。
 参加者と運営が大きな円陣を組み、中央のリーダーがホワイトボードに矢印を描きながら熱く語っている瞬間。
@@ -46,6 +47,7 @@ export default function AboutPage() {
         <div className="mb-6">
           <PhotoFrame
             aspect="portrait"
+            src="/representative.png"
             caption={`代表 ${siteConfig.org.representative}`}
             prompt={`【プロンプト】屋外、初夏の青空を背景にした代表 堀田の上半身ポートレート。
 腕を組んで少しだけ斜めに立ち、口角を上げた自然な笑顔でカメラを真っ直ぐ見る。

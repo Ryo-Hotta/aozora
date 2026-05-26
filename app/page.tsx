@@ -48,6 +48,7 @@ export default function Home() {
           <div className="mt-14">
             <PhotoFrame
               aspect="wide"
+              src="/event-venue.png"
               caption="2026年6月21日 開催予定／256人の人間二進数乗算機（俯瞰イメージ）"
               prompt={`【プロンプト】真夏の青空の下、東京の広大な屋外広場。
 256人の中高生・大学生が16×16の完璧なグリッドに並び、全員が一斉に旗を真上に振り上げた瞬間。
@@ -170,6 +171,7 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             <PhotoFrame
               aspect="square"
+              src="/step1-flags.png"
               caption="Step 1：人間ビット（0/1の表現）"
               prompt={`【プロンプト】屋外、太陽を背にしたヒーロー的ローアングル。
 横一列の高校生・大学生たちが、号令と同時に旗を真上に振り上げた瞬間。黒旗（=1）と白旗（=0）が交互にはためき、コントラストが鮮烈。
@@ -178,7 +180,8 @@ export default function Home() {
             />
             <DiagramFrame
               aspect="square"
-              title="Step 2：16bit×16bit Wallace tree乗算器＋整理フェーズ"
+              src="/step2-action.png"
+              title="Step 2：当日の実際の動き（16bit×16bit Wallace tree＋整理フェーズ）"
               prompt={`【プロンプト】SF映画のホログラム設計図風、未来感のあるインフォグラフィック。
 上段：16bit×16bit Wallace tree 乗算器が立体的に浮かび上がる（入力32→部分積256→Wallace tree 256→CPA 32→出力32）、人型ピクトグラムがHA/FAブロックを担当、信号フローはネオン青の光線で表現。
 下段：2⁰〜2³¹の32本のプラカードが扇状に並び、その前に黒旗を持った小さな人影が「前へならえ」で次位へ流れる動きを残像で表現。
@@ -235,7 +238,8 @@ export default function Home() {
             <div className="mt-10">
               <PhotoFrame
                 aspect="wide"
-                caption="開催地イメージ：東京都内の屋外広場"
+                src="/hero-day-of.png"
+                caption="開催地イメージ：東京都内の屋外広場（カウントダウンの瞬間）"
                 prompt={`【プロンプト】2026年6月21日、東京都心の広大な広場。
 256人が完璧なグリッドで整列し、いままさに公式記録挑戦のカウントダウンに入った緊張の瞬間。
 背景に都心のスカイライン、初夏の青空、白いビブスの認定員がストップウォッチを構え中央に立つ。
