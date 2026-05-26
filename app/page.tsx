@@ -101,6 +101,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Teaser Poster */}
+      <section className="bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 -z-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-sky-500/30 blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-amber-300/20 blur-3xl" />
+        </div>
+        <div className="mx-auto max-w-6xl px-5 py-20 relative">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="order-2 md:order-1">
+              <p className="text-amber-300 font-semibold text-sm tracking-widest mb-3">TEASER</p>
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                君の「1」が、<br />世界を動かす。
+              </h2>
+              <p className="mt-6 text-slate-200 leading-relaxed">
+                私たちは、ひとつの回路になる。
+                <br />
+                256人（＝1バイト）が同期して、はじめて1台のコンピュータが立ち上がる――。
+                白旗（0）と黒旗（1）を掲げる一人ひとりが、世界最大級の挑戦の不可欠な1ビットです。
+              </p>
+              <p className="mt-6 text-sm text-slate-400 tracking-widest">
+                WE ARE HUMAN CIRCUIT ／ 2026.06.21 SUN ／ OPEN AIR CLASSROOM
+              </p>
+            </div>
+            <div className="order-1 md:order-2 mx-auto max-w-sm w-full">
+              <PhotoFrame
+                aspect="portrait"
+                src="/teaser-poster.png"
+                caption="ティザービジュアル：WE ARE HUMAN CIRCUIT"
+                prompt="ティザーポスター：『君の1が、世界を動かす。／ 私たちは、ひとつの回路になる。』"
+                className="bg-white/5 border-white/10"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3 Steps */}
       <section className="bg-slate-50 border-y border-slate-200">
         <div className="mx-auto max-w-6xl px-5 py-20">
@@ -180,8 +216,8 @@ export default function Home() {
             />
             <DiagramFrame
               aspect="square"
-              src="/step2-action.png"
-              title="Step 2：当日の実際の動き（16bit×16bit Wallace tree＋整理フェーズ）"
+              src="/step2-blueprint.jpg"
+              title="Step 2：16bit×16bit Wallace tree＋整理フェーズ（設計図）"
               prompt={`【プロンプト】SF映画のホログラム設計図風、未来感のあるインフォグラフィック。
 上段：16bit×16bit Wallace tree 乗算器が立体的に浮かび上がる（入力32→部分積256→Wallace tree 256→CPA 32→出力32）、人型ピクトグラムがHA/FAブロックを担当、信号フローはネオン青の光線で表現。
 下段：2⁰〜2³¹の32本のプラカードが扇状に並び、その前に黒旗を持った小さな人影が「前へならえ」で次位へ流れる動きを残像で表現。

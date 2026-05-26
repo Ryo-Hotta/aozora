@@ -37,6 +37,7 @@ export default function EventsPage() {
             <div className="mt-8">
               <PhotoFrame
                 aspect="video"
+                src="/event-venue.png"
                 caption="本番イメージ：256人による人間二進数乗算機"
                 prompt={`【プロンプト】真夏の青空、東京都心の屋外広場。
 16×16の格子に整列する256人が、たった今「演算開始」の合図で一斉に旗を振り上げた瞬間。
@@ -97,6 +98,7 @@ export default function EventsPage() {
               title: "自分が\"1ビット\"になる",
               body: "256人それぞれが白旗（0）・黒旗（1）を掲げる「人間ビット」となり、信号が伝わるしくみを肌で感じる。",
               kind: "photo" as const,
+              src: "/step1-flags.png" as string | undefined,
               prompt: `【プロンプト】屋外、太陽を背にした逆光のローアングル。
 横一列の中高生・大学生が、リーダーの号令に合わせて旗を真上に振り上げた瞬間。黒旗（=1）と白旗（=0）が交互にはためき、布が風になびく。
 レンズフレア、汗ばんだ額、見開いた目、口を開けた満面の笑顔、ターコイズのビブスが光に透ける。
@@ -107,6 +109,7 @@ export default function EventsPage() {
               title: "人間二進数乗算機（16bit × 16bit）★ 世界最大級の公式挑戦",
               body: "Wallace tree（乗算を並列処理する高速回路方式）の乗算器を256人で組み立てます。16×16の部分積グリッドを256人ぴったりで埋め、16bit × 16bit（16桁の2進数同士、最大65,535 × 65,535 = 4,294,836,225）の掛け算を実演。演算後は「整理フェーズ」：プラカード32本（2⁰〜2³¹）の前に黒旗の参加者が集まり、繰り上がりは「前へならえ」で次位へ移動。最後に右から読み上げて32桁の答えを確定する、世界初の規模での挑戦。",
               kind: "diagram" as const,
+              src: "/step2-blueprint.jpg" as string | undefined,
               prompt: `【プロンプト】SF映画のホログラム設計図風インフォグラフィック、2段構成。
 上段：16bit×16bit Wallace tree乗算器が立体で浮かぶ（入力32→部分積256→Wallace tree 256→CPA 32→出力32）、人型ピクトグラムがHA/FAブロックを担当、信号フローは蛍光シアンの光線。
 下段：2⁰〜2³¹の32本のプラカードが扇状に並び、黒旗の人影が「前へならえ」で次位へ流れる残像。
@@ -126,9 +129,9 @@ export default function EventsPage() {
               </div>
               <div className="mt-4">
                 {s.kind === "photo" ? (
-                  <PhotoFrame aspect="video" prompt={s.prompt} />
+                  <PhotoFrame aspect="video" src={s.src} prompt={s.prompt} />
                 ) : (
-                  <DiagramFrame aspect="video" prompt={s.prompt} />
+                  <DiagramFrame aspect="video" src={s.src} prompt={s.prompt} />
                 )}
               </div>
             </div>
