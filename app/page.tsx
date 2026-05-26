@@ -51,7 +51,7 @@ export default function Home() {
               caption="2026年6月21日 開催予定／256人の人間二進数乗算機（俯瞰イメージ）"
               prompt={`【プロンプト】真夏の青空の下、東京の広大な屋外広場。
 256人の中高生・大学生が16×16の完璧なグリッドに並び、全員が一斉に旗を真上に振り上げた瞬間。
-黒旗（=1）と白旗（=0）が市松模様のように広場を埋め尽くし、布が風になびいて統一されたパターンを描く。周囲を取り囲む31本のプラカード（2⁰〜2³¹）が扇状に立つ。
+黒旗（=1）と白旗（=0）が市松模様のように広場を埋め尽くし、布が風になびいて統一されたパターンを描く。周囲を取り囲む32本のプラカード（2⁰〜2³¹）が扇状に立つ。
 ビブスは鮮やかなターコイズブルー、表情はカメラ越しでも分かる満面の笑顔と気迫、「やってやった」の高揚感。
 ドローン高高度俯瞰／映画的シネマティック構図／背景に都心の高層ビル群／National Geographic調の彩度／観衆の歓声が聞こえてきそうな臨場感。`}
             />
@@ -105,17 +105,16 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 py-20">
           <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3 text-center">PROGRAM</p>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
-            3ステップで「秩序の生成」を体験する
+            2つのステップで、世界最大級の人間コンピュータを動かす
           </h2>
           <p className="text-center text-slate-600 max-w-2xl mx-auto mb-12">
-            2進数の自分から始まり、Step2「人間二進数乗算機」で世界最大級の公式挑戦。
-            最後にセル・オートマトンで自律世界の立ち上がりまでを、256人の身体で体験します。
+            自分が1ビットになることから始まり、Step 2「16bit × 16bitの人間二進数乗算機」で
+            世界初の規模の公式記録挑戦に挑みます。
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {[
               { n: 1, t: "自分が\"1ビット\"になる", d: "256人が白旗（0）・黒旗（1）を掲げる人間ビットとして並び、信号が伝わるしくみを肌で感じる", highlight: false },
-              { n: 2, t: "人間二進数乗算機（9bit × 9bit）", d: "Wallace tree（乗算を並列処理する回路方式）を256人で組み上げ、最大511×511の掛け算を実演。プラカード方式（位ごとに人を集約して読み上げる整理手順）で18桁の答えを発表する", highlight: true },
-              { n: 3, t: "セル・オートマトン", d: "シンプルなルールから秩序が立ち現れる瞬間に、256人で立ち会う", highlight: false },
+              { n: 2, t: "人間二進数乗算機（16bit × 16bit）", d: "Wallace tree（乗算を並列処理する回路方式）を256人で組み上げ、最大65,535 × 65,535の掛け算を実演。プラカード方式（位ごとに人を集約して読み上げる整理手順）で32桁の答えを発表する。世界初の規模での公式記録挑戦の本番。", highlight: true },
             ].map((s) => (
               <div
                 key={s.n}
@@ -164,11 +163,11 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-10 text-center text-sm text-slate-500">
-            Step2「人間二進数乗算機」で世界最大級の公式記録に挑戦（256人によるWallace tree方式）
+            Step 2「16bit × 16bit 人間二進数乗算機」で世界最大級の公式記録に挑戦（256人によるWallace tree方式）
           </p>
 
           {/* 各ステップのビジュアル予告 */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             <PhotoFrame
               aspect="square"
               caption="Step 1：人間ビット（0/1の表現）"
@@ -179,20 +178,11 @@ export default function Home() {
             />
             <DiagramFrame
               aspect="square"
-              title="Step 2：Wallace tree乗算器＋整理フェーズ"
+              title="Step 2：16bit×16bit Wallace tree乗算器＋整理フェーズ"
               prompt={`【プロンプト】SF映画のホログラム設計図風、未来感のあるインフォグラフィック。
-上段：9bit×9bit Wallace tree 乗算器が立体的に浮かび上がる（入力18→部分積81→Wallace tree 81→CPA 18→出力18）、人型ピクトグラムがHA/FAブロックを担当、信号フローはネオン青の光線で表現。
-下段：2⁰〜2³¹の31本のプラカードが扇状に並び、その前に小さな人影が「前へならえ」で次位へ流れる動きを残像で表現。
+上段：16bit×16bit Wallace tree 乗算器が立体的に浮かび上がる（入力32→部分積256→Wallace tree 256→CPA 32→出力32）、人型ピクトグラムがHA/FAブロックを担当、信号フローはネオン青の光線で表現。
+下段：2⁰〜2³¹の32本のプラカードが扇状に並び、その前に黒旗を持った小さな人影が「前へならえ」で次位へ流れる動きを残像で表現。
 ダークブルー背景に蛍光イエロー＆シアン、等角投影、Bladerunner×Apple Keynote調、見た瞬間「この設計図に自分も組み込まれたい」と思わせる緻密さ。`}
-            />
-            <PhotoFrame
-              aspect="square"
-              caption="Step 3：セル・オートマトン（ライフゲーム）"
-              prompt={`【プロンプト】夕方、オレンジ色の斜光が広場を染める時間帯。
-16×16グリッドの256人が同時に立ち上がったり座り込んだりして、ライフゲームの「グライダー」が広場を斜めに駆け抜けていく決定的瞬間。
-立つ＝白い人影、座る＝影、パターンが波のように広場を移動して見える。
-参加者の何人かが顔を上げて「うわっ、動いてる！」と隣に声をかける表情。
-ドローン中高度俯瞰、長時間露光で動きの残像、宮崎駿アニメのような感動的な光、見た人が思わず「混じりたい」と声に出す絵。`}
             />
           </div>
         </div>
