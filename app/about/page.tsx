@@ -1,4 +1,5 @@
 import { siteConfig } from "@/data/siteConfig";
+import { PhotoFrame } from "@/components/PhotoFrame";
 
 export const metadata = { title: "団体について" };
 
@@ -12,6 +13,15 @@ export default function AboutPage() {
           <p className="mt-5 text-lg text-slate-700 max-w-2xl">
             青空教室の理念、生まれた背景、これからの歩み。
           </p>
+          <div className="mt-10">
+            <PhotoFrame
+              aspect="wide"
+              caption="活動風景：リハーサルの一場面"
+              prompt={`【プロンプト】参加者が屋外で円陣を組み、運営メンバーが説明している場面。
+真剣な表情、ホワイトボードや図解資料が見える。
+自然光、ドキュメンタリー調、横長の構図。`}
+            />
+          </div>
         </div>
       </section>
 
@@ -32,6 +42,16 @@ export default function AboutPage() {
         </p>
 
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-16 mb-6">代表挨拶</h2>
+        <div className="mb-6">
+          <PhotoFrame
+            aspect="portrait"
+            caption={`代表 ${siteConfig.org.representative}`}
+            prompt={`【プロンプト】代表 堀田の上半身ポートレート。
+屋外、自然光、青空背景。柔らかい笑顔で正面を向く。
+カジュアルなシャツ、誠実な印象、3/4縦長構図。`}
+            className="max-w-xs mx-auto"
+          />
+        </div>
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
           <p className="text-slate-700 leading-relaxed">
             私が中高生のときに本当に欲しかったのは、教科書でも参考書でもなく、

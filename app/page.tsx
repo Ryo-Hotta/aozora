@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Cpu, Users, Sparkles, Trophy } from "lucide-react";
+import { PhotoFrame } from "@/components/PhotoFrame";
+import { DiagramFrame } from "@/components/DiagramFrame";
 
 export default function Home() {
   return (
@@ -41,6 +43,18 @@ export default function Home() {
           <p className="mt-6 text-sm text-slate-500">
             参加費 無料｜2026年6月21日（日）｜東京都内（屋外メイン／雨天時は屋内）｜事前登録制
           </p>
+
+          {/* メインビジュアル：256人俯瞰イメージ */}
+          <div className="mt-14">
+            <PhotoFrame
+              aspect="wide"
+              caption="2026年6月21日 開催予定／256人の人間二進数乗算機（俯瞰イメージ）"
+              prompt={`【プロンプト】晴天の屋外広場で、約256人の中高生・大学生が16×16のグリッド状に整列している俯瞰ショット。
+全員が同色のビブス（青系）を着用し、半数が手を上げ（=1）、半数が下ろし（=0）の二進数状態を表現。
+ドローン空撮、自然光、爽やかな初夏の空、人々の影が長く伸びる構図。
+人物の表情は遠景でも分かるよう少し見上げ気味、躍動感あり。`}
+            />
+          </div>
         </div>
       </section>
 
@@ -63,7 +77,7 @@ export default function Home() {
             </p>
           </div>
           <div className="rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-sky-100 p-8 md:p-10">
-            <h3 className="font-bold text-slate-900 mb-6">届けたい3つの価値</h3>
+            <h3 className="font-bold text-slate-900 mb-6">参加者が持ち帰る3つの体験</h3>
             <ol className="space-y-5">
               {[
                 { n: 1, t: "協力の力を体で理解する", d: "256人が同期して、はじめて巨大な知性が立ち上がることを実演する" },
@@ -98,9 +112,9 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { n: 1, t: "2進数で自分を表現する", d: "256人が0/1の人間ビットになり、信号の伝達を体得する", highlight: false },
-              { n: 2, t: "人間二進数乗算機（9bit × 9bit）", d: "Wallace tree乗算器を256人で組み上げ、最大511×511の乗算を実演する", highlight: true },
-              { n: 3, t: "セル・オートマトン", d: "シンプルなルールから秩序が立ち現れる瞬間を、256人で目撃する", highlight: false },
+              { n: 1, t: "自分が\"1ビット\"になる", d: "256人が0/1の人間ビットとして並び、信号が伝わるしくみを肌で感じる", highlight: false },
+              { n: 2, t: "人間二進数乗算機（9bit × 9bit）", d: "Wallace tree（乗算を並列処理する回路方式）を256人で組み上げ、最大511×511の掛け算を実演。プラカード方式（位ごとに人を集約して読み上げる整理手順）で18桁の答えを発表する", highlight: true },
+              { n: 3, t: "セル・オートマトン", d: "シンプルなルールから秩序が立ち現れる瞬間に、256人で立ち会う", highlight: false },
             ].map((s) => (
               <div
                 key={s.n}
@@ -112,20 +126,29 @@ export default function Home() {
               >
                 {s.highlight && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber-400 text-slate-900 text-[10px] font-bold tracking-wider whitespace-nowrap">
-                    ★ WORLD-FIRST
+                    ★ 世界初
                   </span>
                 )}
+                <p
+                  className={
+                    s.highlight
+                      ? "text-[10px] font-bold tracking-[0.2em] text-sky-100 mb-1"
+                      : "text-[10px] font-bold tracking-[0.2em] text-sky-700 mb-1"
+                  }
+                >
+                  STEP
+                </p>
                 <div
                   className={
                     s.highlight
-                      ? "w-10 h-10 mx-auto rounded-full bg-white text-sky-700 font-bold flex items-center justify-center mb-3"
-                      : "w-10 h-10 mx-auto rounded-full bg-sky-600 text-white font-bold flex items-center justify-center mb-3"
+                      ? "w-12 h-12 mx-auto rounded-full bg-white text-sky-700 font-bold text-xl flex items-center justify-center mb-3"
+                      : "w-12 h-12 mx-auto rounded-full bg-sky-600 text-white font-bold text-xl flex items-center justify-center mb-3"
                   }
                 >
                   {s.n}
                 </div>
                 <p className={s.highlight ? "font-bold mb-2" : "font-bold text-slate-900 mb-2"}>
-                  Step {s.n}：{s.t}
+                  {s.t}
                 </p>
                 <p
                   className={
@@ -142,15 +165,44 @@ export default function Home() {
           <p className="mt-10 text-center text-sm text-slate-500">
             Step2「人間二進数乗算機」で世界最大級の公式記録に挑戦（256人によるWallace tree方式）
           </p>
+
+          {/* 各ステップのビジュアル予告 */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <PhotoFrame
+              aspect="square"
+              caption="Step 1：人間ビット（0/1の表現）"
+              prompt={`【プロンプト】中高生が屋外で片手を高く上げて「1」を表現している横一列のショット。
+別の生徒は腕を下ろし「0」を表現。全員青系のビブス。
+笑顔で楽しそうな雰囲気、ローアングル、自然光。`}
+            />
+            <DiagramFrame
+              aspect="square"
+              title="Step 2：Wallace tree乗算器＋整理フェーズ"
+              prompt={`【プロンプト】2段構成の図。
+上段：9bit×9bit Wallace tree 乗算器（入力18→部分積81→Wallace tree 81→CPA 18→出力18）。
+下段：整理フェーズ（2⁰〜2³¹のプラカード31本の前に黒旗の人が並ぶ／繰り上がりは「前へならえ」で次位へ）。
+等角投影、青と黄、矢印でデータフロー明示。`}
+            />
+            <PhotoFrame
+              aspect="square"
+              caption="Step 3：セル・オートマトン（ライフゲーム）"
+              prompt={`【プロンプト】グリッド状に並んだ参加者が、隣人の状態に応じて立ったり座ったりして
+ライフゲームのパターンを生成している空撮。
+明暗で生死を表現、複雑な秩序が立ち現れる瞬間を強調。`}
+            />
+          </div>
         </div>
       </section>
 
       {/* Values */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3 text-center">VALUES</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
-          私たちが大切にしていること
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
+          企画づくりの3つの軸
         </h2>
+        <p className="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm">
+          上の「参加者が持ち帰る3つの体験」を成立させるために、私たち運営が貫いている行動原則です。
+        </p>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             { icon: Cpu, title: "考え抜く", desc: "答えを暗記するのではなく、自分の頭で論理を組み立てる経験を最優先します。" },
@@ -185,6 +237,17 @@ export default function Home() {
               青空教室の旗艦イベント。256人規模（＝1バイト）・参加費無料・1日完結型。
               屋外メイン（雨天時は屋内）、共同名義での開催です。事前登録制での参加申込を順次受け付けています。
             </p>
+
+            <div className="mt-10">
+              <PhotoFrame
+                aspect="wide"
+                caption="開催地イメージ：東京都内の屋外広場"
+                prompt={`【プロンプト】東京都内の広い屋外広場（公園 or 大学キャンパス）に256人が整列して計算実演している空撮。
+背景に都心のスカイライン、爽やかな初夏の青空、認定員らしき人物が中央で観察。
+俯瞰アングル、ドローン撮影、コントラスト強め。`}
+                className="bg-white/10 border-white/30"
+              />
+            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/events"

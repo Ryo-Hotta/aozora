@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Calendar, MapPin, Users, Trophy, ArrowRight, JapaneseYen } from "lucide-react";
+import { PhotoFrame } from "@/components/PhotoFrame";
+import { DiagramFrame } from "@/components/DiagramFrame";
 
 export const metadata = { title: "開催情報" };
 
@@ -31,6 +33,18 @@ export default function EventsPage() {
               256人（＝1バイト）が自分自身を「1ビット」として動き、屋外で9bit × 9bitの二進数乗算（最大511×511）を実演します。
               Wallace tree方式の乗算器を人体のみで構成する、世界初の規模での公式記録挑戦です。
             </p>
+
+            <div className="mt-8">
+              <PhotoFrame
+                aspect="video"
+                caption="本番イメージ：256人による人間二進数乗算機"
+                prompt={`【プロンプト】青空の下、16×16の格子状に整列する256人の中高生・大学生。
+全員が青系ビブスを着用、半数が手を上げ「1」、半数が下ろし「0」。
+中央に認定員がクリップボードを持って観察。
+ドローン俯瞰、夏の柔らかい光、長く伸びる影。`}
+                className="bg-white/10 border-white/30"
+              />
+            </div>
 
             <div className="mt-10 grid sm:grid-cols-2 gap-5">
               {[
@@ -75,26 +89,56 @@ export default function EventsPage() {
         <p className="text-sm text-slate-500 mb-8">
           1日完結・3ステップ。詳細タイムスケジュールは事前登録者へ別途ご案内します。
         </p>
-        <ol className="space-y-3">
+        <div className="space-y-8">
           {[
-            { n: "Step 1", title: "2進数で自分を表現する", body: "256人それぞれが0/1の状態を持つ「人間ビット」となり、信号の伝達を体感。" },
-            { n: "Step 2", title: "人間二進数乗算機（9bit × 9bit）★ 世界最大級の公式挑戦", body: "Wallace tree乗算器を256人で組み立て、9bit×9bit（最大511×511＝261,121）の二進数乗算を実演。FA/HAレベルから人体で構成する、世界初の規模での挑戦。" },
-            { n: "Step 3", title: "セル・オートマトン（教育演目）", body: "ライフゲームのシンプルなルールから複雑な秩序が立ち上がる瞬間を、256人の身体で実演。" },
+            {
+              n: "Step 1",
+              title: "自分が\"1ビット\"になる",
+              body: "256人それぞれが0/1の状態を持つ「人間ビット」となり、信号が伝わるしくみを肌で感じる。",
+              kind: "photo" as const,
+              prompt: `【プロンプト】中高生が一列に並び、半分が手を上げ「1」、半分が下ろし「0」を表現。
+笑顔、青系ビブス、屋外、ローアングル。`,
+            },
+            {
+              n: "Step 2",
+              title: "人間二進数乗算機（9bit × 9bit）★ 世界最大級の公式挑戦",
+              body: "Wallace tree（乗算を並列処理する高速回路方式）の乗算器を256人で組み立て、9bit×9bit（9桁の2進数同士、最大511×511＝261,121）の掛け算を実演。演算後は「整理フェーズ」：プラカード31本（2⁰〜2³¹）の前に黒旗の参加者が集まり、繰り上がりは「前へならえ」で次位へ移動。最後に右から読み上げて18桁の答えを確定する、世界初の規模での挑戦。",
+              kind: "diagram" as const,
+              prompt: `【プロンプト】9bit×9bit Wallace tree乗算器＋整理フェーズの2段構成図。
+上段：演算層（入力18→部分積81→Wallace tree 81→CPA 18→出力18）
+下段：整理フェーズ（2⁰〜2³¹のプラカード31本、黒旗の人が並び、繰り上がり矢印で次位へ）。
+等角投影、青と黄のコントラスト。`,
+            },
+            {
+              n: "Step 3",
+              title: "セル・オートマトン（教育演目）",
+              body: "ライフゲームのシンプルなルールから複雑な秩序が立ち上がる瞬間を、256人の身体で実演。",
+              kind: "photo" as const,
+              prompt: `【プロンプト】グリッド状の参加者が立つ/座るで生死を表現。
+ライフゲームの「グライダー」「点滅子」パターンが見える瞬間を空撮。`,
+            },
           ].map((s) => (
-            <li
+            <div
               key={s.n}
-              className="rounded-2xl border border-slate-200 bg-white p-5 md:p-6 flex gap-5 hover:border-sky-300 transition"
+              className="rounded-2xl border border-slate-200 bg-white p-5 md:p-6 hover:border-sky-300 transition"
             >
-              <div className="shrink-0 w-24 text-sky-700 font-bold">
-                {s.n}
+              <div className="flex gap-5">
+                <div className="shrink-0 w-24 text-sky-700 font-bold">{s.n}</div>
+                <div className="flex-1">
+                  <p className="font-semibold text-slate-900">{s.title}</p>
+                  <p className="mt-1 text-sm text-slate-600 leading-relaxed">{s.body}</p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-slate-900">{s.title}</p>
-                <p className="mt-1 text-sm text-slate-600 leading-relaxed">{s.body}</p>
+              <div className="mt-4">
+                {s.kind === "photo" ? (
+                  <PhotoFrame aspect="video" prompt={s.prompt} />
+                ) : (
+                  <DiagramFrame aspect="video" prompt={s.prompt} />
+                )}
               </div>
-            </li>
+            </div>
           ))}
-        </ol>
+        </div>
       </section>
 
       {/* Notice */}

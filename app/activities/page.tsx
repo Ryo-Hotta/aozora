@@ -1,4 +1,6 @@
 import { Binary, Cpu, Globe2, Trophy } from "lucide-react";
+import { PhotoFrame } from "@/components/PhotoFrame";
+import { DiagramFrame } from "@/components/DiagramFrame";
 
 export const metadata = { title: "プログラム" };
 
@@ -6,23 +8,34 @@ const steps = [
   {
     icon: Binary,
     step: "Step 1",
-    title: "2進数で自分を表現する",
-    body: "256人（＝1バイト）それぞれが「0か1」の状態を持つ人間ビットになります。手の上げ下げ・前後の動きなど、自分自身を信号に変換する感覚を身体で覚えます。",
+    title: "自分が\"1ビット\"になる",
+    body: "256人（＝1バイト）それぞれが「0か1」の状態を持つ人間ビットになります。手の上げ下げ・前後の動きなど、自分自身を信号に変換する感覚を肌で感じます。",
     learning: "情報の最小単位（ビット）と、信号の伝達。",
+    visualKind: "photo" as const,
+    visualPrompt: `【プロンプト】中高生が屋外で片手を高く上げて「1」を表現する横一列ショット。
+別の生徒は腕を下ろし「0」を表現。青系ビブス、笑顔、自然光、ローアングル。`,
   },
   {
     icon: Cpu,
     step: "Step 2",
     title: "256人で人間二進数乗算機（9bit × 9bit）を組み上げる",
-    body: "全員でHA（半加算器）・FA（全加算器）を担当し、Wallace tree方式の乗算器を人体で構成します。最大511 × 511 = 261,121の9bit × 9bit乗算を、屋外で実演。一人ひとりが正しく動かないと答えが崩れる構造を体感します。★世界最大級・世界初の規模での公式記録挑戦の本番演目。",
-    learning: "論理ゲートの組み合わせで乗算が成立する仕組み／Wallace tree／部分積／キャリー伝播。",
+    body: "全員でHA（半加算器：1桁の足し算回路）・FA（全加算器：繰り上がりを含む足し算回路）を担当し、Wallace tree（乗算を並列処理する高速回路方式）の乗算器を人体で構成します。最大511 × 511 = 261,121の9bit × 9bit（9桁の2進数同士）の掛け算を、屋外で実演。演算終了後は「整理フェーズ」へ：各位（2⁰〜2³¹）のプラカードの前に黒旗の参加者が集合し、繰り上がりは「前へならえ」で次の位へ移動。最後に右から読み上げて18桁の答えを確定します。★世界最大級・世界初の規模での公式記録挑戦の本番演目。",
+    learning: "論理ゲートの組み合わせで乗算が成立する仕組み／Wallace tree／部分積／キャリー伝播／整理フェーズの物理アルゴリズム。",
+    visualKind: "diagram" as const,
+    visualPrompt: `【プロンプト】9bit×9bit Wallace tree乗算器の人体配置図＋整理フェーズの両方を1枚に。
+左：演算層（入力18→部分積81→Wallace tree 81→CPA 18→出力18）
+右：整理フェーズ（2⁰〜2³¹のプラカード31本、各位1人ずつ、繰り上がりは矢印で次位へ）。
+HA/FAブロックを色分け、等角投影、青と黄。`,
   },
   {
     icon: Globe2,
     step: "Step 3",
     title: "セル・オートマトンで自律世界を立ち上げる",
-    body: "シンプルなルールだけで複雑なパターンが生成される「ライフゲーム」を、256人の身体で実演します。意図せず秩序が生まれる瞬間を全員で目撃します（教育演目）。",
+    body: "シンプルなルールだけで複雑なパターンが生成される「ライフゲーム」を、256人の身体で実演します。意図せず秩序が生まれる瞬間に全員で立ち会います（教育演目）。",
     learning: "創発・自己組織化・複雑系という思考の道具。",
+    visualKind: "photo" as const,
+    visualPrompt: `【プロンプト】16×16グリッドに整列した参加者がライフゲームのパターンを実演。
+立つ＝生／座る＝死、明暗で表現。グライダーや点滅子の形状が空撮で見える。`,
   },
   {
     icon: Trophy,
@@ -30,6 +43,9 @@ const steps = [
     title: "公式記録への挑戦",
     body: "「256人による人間二進数乗算機（9bit × 9bit）」として、世界記録機関に公式申請。Step2で組んだWallace tree乗算器を本番として、認定員立会いのもと実演します。第三者の数学者による独立検算も同時に実施。挑戦の成立は、全員の正確な動きにかかっています。",
     learning: "世界レベルの挑戦を、自分たちの手で成立させた事実。",
+    visualKind: "photo" as const,
+    visualPrompt: `【プロンプト】認定員（スーツ姿）が中央に立ち、256人の参加者と数学者証人が見守る中、
+代表者に認定証が手渡される瞬間。歓声と拍手、夕方の柔らかい光、感動的な構図。`,
   },
 ];
 
@@ -60,6 +76,13 @@ export default function ActivitiesPage() {
                 <span className="text-xs font-bold text-sky-700 tracking-widest">{p.step}</span>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
+              <div className="mb-4">
+                {p.visualKind === "photo" ? (
+                  <PhotoFrame aspect="video" prompt={p.visualPrompt} />
+                ) : (
+                  <DiagramFrame aspect="video" prompt={p.visualPrompt} />
+                )}
+              </div>
               <p className="text-slate-600 leading-relaxed mb-4">{p.body}</p>
               <p className="text-xs text-slate-500 border-t border-slate-100 pt-3">
                 <span className="font-semibold text-slate-700">学べること：</span>
