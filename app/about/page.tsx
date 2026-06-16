@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="mt-10">
             <PhotoFrame
               aspect="wide"
-              src="/rehearsal.png"
+              src="/rehearsal-real.png"
               caption="活動風景：リハーサルの一場面"
               prompt={`【プロンプト】屋外、夕方の柔らかい光。
 参加者と運営が大きな円陣を組み、中央のリーダーがホワイトボードに矢印を描きながら熱く語っている瞬間。
@@ -50,7 +50,7 @@ export default function AboutPage() {
           {/* 実写真 */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/hotta-representative.png"
+            src="/hotta-real.png"
             alt="青空教室 代表 堀田亮"
             className="w-40 h-40 rounded-2xl object-cover shrink-0 shadow-md"
           />

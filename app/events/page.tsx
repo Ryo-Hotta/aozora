@@ -124,7 +124,7 @@ export default function EventsPage() {
               title: "自分が\"1ビット\"になる",
               body: "256人それぞれが白旗（0）・黒旗（1）を掲げる「人間ビット」となり、信号が伝わるしくみを肌で感じる。",
               kind: "photo" as const,
-              src: "/step1-flags.png" as string | undefined,
+              src: "/step1-flags-real.png" as string | undefined,
               prompt: `【プロンプト】屋外、太陽を背にした逆光のローアングル。
 横一列の中高生・大学生が、リーダーの号令に合わせて旗を真上に振り上げた瞬間。黒旗（=1）と白旗（=0）が交互にはためき、布が風になびく。
 レンズフレア、汗ばんだ額、見開いた目、口を開けた満面の笑顔、ターコイズのビブスが光に透ける。

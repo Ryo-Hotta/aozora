@@ -228,7 +228,7 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             <PhotoFrame
               aspect="square"
-              src="/step1-flags.png"
+              src="/step1-flags-real.png"
               caption="Step 1：人間ビット（0/1の表現）"
               prompt={`【プロンプト】屋外、太陽を背にしたヒーロー的ローアングル。
 横一列の高校生・大学生たちが、号令と同時に旗を真上に振り上げた瞬間。黒旗（=1）と白旗（=0）が交互にはためき、コントラストが鮮烈。
