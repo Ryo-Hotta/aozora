@@ -29,7 +29,7 @@ export default function Header() {
             className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-emerald-300 text-emerald-700 text-sm font-medium hover:bg-emerald-50 transition"
           >
             <MessageCircle className="w-4 h-4" />
-            LINEグループ
+            オープンチャット
           </a>
           <Link
             href="/contact"

@@ -17,8 +17,8 @@ export const siteConfig = {
   },
   links: {
     applicationForm: "https://forms.gle/aS9pkcvqk8a2GEkr5",
-    lineGroup: "https://line.me/ti/g/7syuWLyNck",
-    lineGroupName: "人間コンピュータで世界一",
+    lineGroup: "https://line.me/ti/g2/MxX3wJfs_krZUNkddnosRWBEPvi7sUnaOKcmXw",
+    lineGroupName: "【青空教室】人間コンピュータで世界一",
   },
   sns: {
     instagram: "",

@@ -95,7 +95,7 @@ export default function AboutPage() {
             6月28日、野田キャンパスで一緒に動かしましょう。
           </h2>
           <p className="mt-3 text-slate-600">
-            まずはLINEグループで準備の裏側や残り日数をお届けします。
+            まずはオープンチャットで準備の裏側や残り日数をお届けします。
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <a
@@ -114,7 +114,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/20"
             >
               <MessageCircle className="w-4 h-4" />
-              LINEグループに参加
+              オープンチャットに参加
             </a>
             <Link
               href="/contact"

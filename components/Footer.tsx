@@ -46,7 +46,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-emerald-700 text-emerald-600 font-medium"
               >
-                LINEグループ「{siteConfig.links.lineGroupName}」
+                オープンチャット「{siteConfig.links.lineGroupName}」
               </a>
             </li>
             <li>
