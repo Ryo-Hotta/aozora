@@ -30,7 +30,7 @@ export default function ContactPage() {
             6/28当日に参加される方は、まずこちらのフォームから事前登録をお願いします。中高生・大学生・社会人どなたでも参加可能です。
           </p>
           <a
-            href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+            href={siteConfig.links.applicationForm}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-semibold hover:bg-sky-700 transition"
@@ -40,25 +40,25 @@ export default function ContactPage() {
           </a>
         </div>
 
-        {/* オープンチャット（メイン拠点） */}
+        {/* LINEグループ（メイン拠点） */}
         <div className="rounded-2xl bg-white border border-sky-100 p-8 md:p-10">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500 text-white mb-4">
             <MessageCircle className="w-6 h-6" />
           </div>
           <p className="text-xs font-bold text-emerald-700 tracking-widest mb-2">STEP 2｜情報入手・コミュニティ参加</p>
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-            LINEオープンチャット「人間コンピュータで世界一」
+            LINEグループ「人間コンピュータで世界一」
           </h2>
           <p className="text-slate-700 leading-relaxed text-sm mb-5">
-            参加者・運営・興味のある方が集う匿名OKのコミュニティ。当日までのリハーサル情報・小話・進捗をこちらで共有しています。事前申込済の方は必ずご参加ください。
+            参加者・運営・興味のある方が集うコミュニティ。当日までのリハーサル情報・小話・進捗をこちらで共有しています。事前申込済の方は必ずご参加ください。
           </p>
           <a
-            href="https://line.me/ti/g2/MxX3wJfs_krZUNkddnosRWBEPvi7sUnaOKcmXw"
+            href="https://line.me/ti/g/7syuWLyNck"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition"
           >
-            オープンチャットに参加する
+            LINEグループに参加する
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

@@ -27,12 +27,34 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold text-slate-900 mb-3">お問い合わせ</h4>
-          <p className="text-sm text-slate-600">
-            <a href={`mailto:${siteConfig.email}`} className="hover:text-sky-700">
-              {siteConfig.email}
-            </a>
-          </p>
+          <h4 className="text-sm font-semibold text-slate-900 mb-3">参加・お問い合わせ</h4>
+          <ul className="space-y-2 text-sm text-slate-600">
+            <li>
+              <a
+                href={siteConfig.links.applicationForm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-sky-700"
+              >
+                参加申込フォーム
+              </a>
+            </li>
+            <li>
+              <a
+                href={siteConfig.links.lineGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-700 text-emerald-600 font-medium"
+              >
+                LINEグループ「{siteConfig.links.lineGroupName}」
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-sky-700">
+                {siteConfig.email}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="border-t border-slate-200">

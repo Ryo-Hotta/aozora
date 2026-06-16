@@ -10,6 +10,16 @@ export const siteConfig = {
     representative: "堀田亮",
     foundedYear: 2026,
   },
+  event: {
+    date: "2026-06-28",
+    dateLabel: "2026年6月28日（日）",
+    venue: "東京理科大学 野田キャンパス",
+  },
+  links: {
+    applicationForm: "https://forms.gle/aS9pkcvqk8a2GEkr5",
+    lineGroup: "https://line.me/ti/g/7syuWLyNck",
+    lineGroupName: "人間コンピュータで世界一",
+  },
   sns: {
     instagram: "",
   },

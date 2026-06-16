@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Cpu, Users, Sparkles, Trophy } from "lucide-react";
+import { ArrowRight, Cpu, Users, Sparkles, Trophy, MessageCircle } from "lucide-react";
 import { PhotoFrame } from "@/components/PhotoFrame";
 import { DiagramFrame } from "@/components/DiagramFrame";
+import { Countdown } from "@/components/Countdown";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function Home() {
   return (
@@ -26,15 +28,28 @@ export default function Home() {
             256人（＝1バイト）の中高生・大学生が白旗（0）・黒旗（1）を掲げる「1ビット」となり、
             屋外で世界最大級の人間二進数乗算機をみんなで立ち上げます。
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-amber-100 border border-amber-300 text-amber-900 font-semibold">
+            <Countdown targetDate={siteConfig.event.date} />
+            <span className="text-sm text-amber-700">／ 6月28日（日）本番</span>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+              href={siteConfig.links.applicationForm}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
             >
               参加申込フォームへ（無料）
               <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={siteConfig.links.lineGroup}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-medium hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/20"
+            >
+              <MessageCircle className="w-4 h-4" />
+              まずLINEで情報を受け取る
             </a>
             <Link
               href="/events"
@@ -205,6 +220,9 @@ export default function Home() {
           <p className="mt-10 text-center text-sm text-slate-500">
             Step 2「16bit × 16bit 人間二進数乗算機」で世界最大級の公式記録に挑戦（256人によるWallace tree方式）
           </p>
+          <p className="mt-3 text-center text-xs text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            ※ 公式記録機関との手続き進行中のため、現時点では「世界最大級」「世界初」等の表記でご案内しています。正式名称は契約締結後に本ページで公開します。
+          </p>
 
           {/* 各ステップのビジュアル予告 */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
@@ -320,13 +338,22 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+              href={siteConfig.links.applicationForm}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
             >
               参加申込フォームへ（無料）
               <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={siteConfig.links.lineGroup}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-medium hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/20"
+            >
+              <MessageCircle className="w-4 h-4" />
+              LINEグループに参加
             </a>
             <Link
               href="/contact"

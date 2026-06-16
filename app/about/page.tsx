@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { PhotoFrame } from "@/components/PhotoFrame";
 
@@ -87,6 +89,41 @@ export default function AboutPage() {
             </div>
           ))}
         </dl>
+
+        <div className="mt-16 rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-sky-100 p-8 md:p-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            6月28日、野田キャンパスで一緒に動かしましょう。
+          </h2>
+          <p className="mt-3 text-slate-600">
+            まずはLINEグループで準備の裏側や残り日数をお届けします。
+          </p>
+          <div className="mt-7 flex flex-wrap justify-center gap-4">
+            <a
+              href={siteConfig.links.applicationForm}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-semibold hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
+            >
+              参加申込フォームへ（無料）
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={siteConfig.links.lineGroup}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/20"
+            >
+              <MessageCircle className="w-4 h-4" />
+              LINEグループに参加
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
+            >
+              お問い合わせ
+            </Link>
+          </div>
+        </div>
       </section>
     </>
   );

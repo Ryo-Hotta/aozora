@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function Header() {
@@ -21,6 +22,15 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
+          <a
+            href={siteConfig.links.lineGroup}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-emerald-300 text-emerald-700 text-sm font-medium hover:bg-emerald-50 transition"
+          >
+            <MessageCircle className="w-4 h-4" />
+            LINEグループ
+          </a>
           <Link
             href="/contact"
             className="inline-flex items-center px-4 py-2 rounded-full bg-sky-600 text-white text-sm font-medium hover:bg-sky-700 transition"

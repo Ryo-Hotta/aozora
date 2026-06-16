@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { Calendar, MapPin, Users, Trophy, ArrowRight, JapaneseYen } from "lucide-react";
+import { Calendar, MapPin, Users, Trophy, ArrowRight, JapaneseYen, MessageCircle } from "lucide-react";
 import { PhotoFrame } from "@/components/PhotoFrame";
 import { DiagramFrame } from "@/components/DiagramFrame";
+import { Countdown } from "@/components/Countdown";
+import { siteConfig } from "@/data/siteConfig";
 
 export const metadata = { title: "開催情報" };
 
@@ -71,15 +73,27 @@ export default function EventsPage() {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-amber-300/20 border border-amber-200/40 text-amber-100 font-semibold">
+              <Countdown targetDate={siteConfig.event.date} />
+            </div>
+            <div className="mt-6 flex flex-wrap gap-4">
               <a
-                href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+                href={siteConfig.links.applicationForm}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-sky-700 font-semibold hover:bg-sky-50 transition"
               >
                 参加申込フォームへ（無料）
                 <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href={siteConfig.links.lineGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                LINEグループに参加
               </a>
               <Link
                 href="/contact"
@@ -158,7 +172,7 @@ export default function EventsPage() {
           <ul className="text-sm text-slate-700 leading-relaxed space-y-2 list-disc list-inside">
             <li>参加者（中高生・大学生・社会人）：事前登録制で受付中</li>
             <li>応援企業・団体：公式記録挑戦の応援者として社名・ロゴをHP・認定書・配布物に掲載（採用接点の提供は行いません）</li>
-            <li>運営ボランティア：当日運営・準備リハーサル（6/12〜6/27）への参画</li>
+            <li>運営ボランティア：当日運営・準備リハーサル（〜6/27）への参画</li>
             <li>取材・メディア：当日撮影／事前取材のご相談</li>
           </ul>
           <div className="mt-5">
