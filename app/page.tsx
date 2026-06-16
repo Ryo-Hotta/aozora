@@ -14,25 +14,28 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-6xl px-5 pt-20 pb-24 md:pt-28 md:pb-32">
           <p className="text-sky-700 font-semibold tracking-widest text-sm mb-4">
-            OPEN AIR CLASSROOM｜2026年6月21日（日）開催
+            OPEN AIR CLASSROOM｜2026年6月28日（日）開催
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-900">
-            256人で、<br className="md:hidden" />
-            世界最大級の人間コンピュータをつくる。
+            サイエンスは楽しい。<br />
+            ワクワクする。<br className="md:hidden" />
+            <span className="text-sky-600">それを、体で知ってほしい。</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed">
+            サイエンスを"見る"のではなく、自分の体で"動かす"側に回れる1日。<br />
             256人（＝1バイト）の中高生・大学生が白旗（0）・黒旗（1）を掲げる「1ビット」となり、
-            屋外で世界最大級の人間二進数乗算機を実演する1日。
-            世界初の規模での公式記録挑戦を通じて、「論理で世界を動かせる」原体験を持ち帰ります。
+            屋外で世界最大級の人間二進数乗算機をみんなで立ち上げます。
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
+            <a
+              href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
             >
-              参加申込・協賛・取材のお問い合わせ
+              参加申込フォームへ（無料）
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
             <Link
               href="/events"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
@@ -41,7 +44,7 @@ export default function Home() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500">
-            参加費 無料｜2026年6月21日（日）｜東京都内（屋外メイン／雨天時は屋内）｜事前登録制
+            参加費 無料｜2026年6月28日（日）｜東京理科大学 野田キャンパス（屋外メイン／雨天時は屋内）｜事前登録制
           </p>
 
           {/* メインビジュアル：256人俯瞰イメージ */}
@@ -49,7 +52,7 @@ export default function Home() {
             <PhotoFrame
               aspect="wide"
               src="/event-venue.png"
-              caption="2026年6月21日 開催予定／256人の人間二進数乗算機（俯瞰イメージ）"
+              caption="2026年6月28日 開催予定／256人の人間二進数乗算機（俯瞰イメージ）"
               prompt={`【プロンプト】真夏の青空の下、東京の広大な屋外広場。
 256人の中高生・大学生が16×16の完璧なグリッドに並び、全員が一斉に旗を真上に振り上げた瞬間。
 黒旗（=1）と白旗（=0）が市松模様のように広場を埋め尽くし、布が風になびいて統一されたパターンを描く。周囲を取り囲む32本のプラカード（2⁰〜2³¹）が扇状に立つ。
@@ -84,7 +87,7 @@ export default function Home() {
               {[
                 { n: 1, t: "協力の力を体で理解する", d: "256人が同期して、はじめて巨大な知性が立ち上がることを実演する" },
                 { n: 2, t: "論理的思考を人生の道具にする", d: "ゴール／条件／現在地／差分の4ステップを、机ではなく屋外で使い切る" },
-                { n: 3, t: "世界初の挑戦に立ち会う", d: "世界最大級の人間二進数乗算機を、自分たちの手で成立させる" },
+                { n: 3, t: "「動かす側」になる", d: "サイエンスを〝見る〟のではなく、自分の体で〝動かす〟側に回れる1日。世界最大級の挑戦を、自分たちの手で成立させる" },
               ].map((s) => (
                 <li key={s.n} className="flex gap-4">
                   <span className="shrink-0 w-9 h-9 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center">
@@ -121,7 +124,7 @@ export default function Home() {
                 白旗（0）と黒旗（1）を掲げる一人ひとりが、世界最大級の挑戦の不可欠な1ビットです。
               </p>
               <p className="mt-6 text-sm text-slate-400 tracking-widest">
-                WE ARE HUMAN CIRCUIT ／ 2026.06.21 SUN ／ OPEN AIR CLASSROOM
+                WE ARE HUMAN CIRCUIT ／ 2026.06.28 SUN ／ OPEN AIR CLASSROOM
               </p>
             </div>
             <div className="order-1 md:order-2 mx-auto max-w-sm w-full">
@@ -264,7 +267,7 @@ export default function Home() {
           <div className="relative">
             <p className="text-sky-200 text-sm font-semibold tracking-widest mb-3">UPCOMING EVENT</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              2026年6月21日（日）｜<br className="md:hidden" />東京都内で開催
+              2026年6月28日（日）｜<br className="md:hidden" />東京理科大学 野田キャンパスで開催
             </h2>
             <p className="mt-6 max-w-2xl text-sky-100 leading-relaxed">
               青空教室の旗艦イベント。256人規模（＝1バイト）・参加費無料・1日完結型。
@@ -275,8 +278,8 @@ export default function Home() {
               <PhotoFrame
                 aspect="wide"
                 src="/hero-day-of.png"
-                caption="開催地イメージ：東京都内の屋外広場（カウントダウンの瞬間）"
-                prompt={`【プロンプト】2026年6月21日、東京都心の広大な広場。
+                caption="開催地イメージ：東京理科大学野田キャンパス（カウントダウンの瞬間）"
+                prompt={`【プロンプト】2026年6月28日、東京理科大学野田キャンパスの広場。
 256人が完璧なグリッドで整列し、いままさに公式記録挑戦のカウントダウンに入った緊張の瞬間。
 背景に都心のスカイライン、初夏の青空、白いビブスの認定員がストップウォッチを構え中央に立つ。
 広場の周囲を観衆と報道カメラが取り囲み、ドローンが上空を旋回。
@@ -312,14 +315,24 @@ export default function Home() {
             参加申込・協賛・取材のご相談はこちら
           </h2>
           <p className="mt-4 text-slate-600">
-            事前登録での参加申込のほか、協賛（人材アクセス・PR）、メディア取材、運営参画のお問い合わせも歓迎しています。
+            参加費無料・1日完結。サイエンスを体で動かす側に回れる機会です。<br className="hidden md:block" />
+            事前登録申込のほか、応援・協賛、メディア取材、運営参画もご相談ください。
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
+            >
+              参加申込フォームへ（無料）
+              <ArrowRight className="w-4 h-4" />
+            </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-medium hover:bg-sky-700 transition"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 bg-white text-slate-900 font-medium hover:border-sky-600 hover:text-sky-700 transition"
             >
-              お問い合わせ
+              協賛・取材・運営のご相談
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

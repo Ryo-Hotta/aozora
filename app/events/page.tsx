@@ -12,8 +12,11 @@ export default function EventsPage() {
         <div className="mx-auto max-w-6xl px-5 py-20">
           <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3">EVENTS</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900">開催情報</h1>
-          <p className="mt-5 text-lg text-slate-700 max-w-2xl">
-            2026年6月21日（日）、東京都内（屋外メイン／雨天時は屋内）で1日完結型のイベントを開催します。事前登録制での参加申込を受け付けています。
+          <p className="mt-4 text-xl md:text-2xl font-semibold text-sky-700">
+            サイエンスを"見る"のではなく、自分の体で"動かす"側に回れる1日。
+          </p>
+          <p className="mt-4 text-lg text-slate-700 max-w-2xl">
+            2026年6月28日（日）、東京理科大学 野田キャンパス（屋外メイン／雨天時は屋内）で1日完結型のイベントを開催します。事前登録制での参加申込を受け付けています。
           </p>
         </div>
       </section>
@@ -39,7 +42,7 @@ export default function EventsPage() {
                 aspect="video"
                 src="/event-venue.png"
                 caption="本番イメージ：256人による人間二進数乗算機"
-                prompt={`【プロンプト】真夏の青空、東京都心の屋外広場。
+                prompt={`【プロンプト】真夏の青空、東京理科大学野田キャンパスの広場。
 16×16の格子に整列する256人が、たった今「演算開始」の合図で一斉に旗を振り上げた瞬間。
 黒旗（=1）と白旗（=0）が市松模様のように広場を埋め尽くし、布が風になびいて統一されたパターンを描く。広場の縁には32本のプラカード（2⁰〜2³¹）が扇状に並ぶ。
 中央には白衣の数学者証人とスーツ姿の認定員がストップウォッチを構え、周囲には観衆と報道カメラ。
@@ -50,8 +53,8 @@ export default function EventsPage() {
 
             <div className="mt-10 grid sm:grid-cols-2 gap-5">
               {[
-                { icon: Calendar, label: "開催日", value: "2026年6月21日（日）｜1日完結型" },
-                { icon: MapPin, label: "開催地", value: "東京都内（屋外メイン／雨天時は屋内に切替）" },
+                { icon: Calendar, label: "開催日", value: "2026年6月28日（日）｜1日完結型" },
+                { icon: MapPin, label: "開催地", value: "東京理科大学 野田キャンパス（屋外メイン／雨天時は屋内に切替）" },
                 { icon: Users, label: "規模", value: "総勢300人規模（演算コア256人＋運営・観客）" },
                 { icon: JapaneseYen, label: "参加費", value: "無料（事前登録制）" },
                 { icon: Trophy, label: "挑戦内容", value: "世界最大級の人間二進数乗算機（256人・16bit × 16bit・Wallace tree方式）" },
@@ -69,11 +72,20 @@ export default function EventsPage() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
+              <a
+                href="https://forms.gle/aS9pkcvqk8a2GEkr5"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-sky-700 font-semibold hover:bg-sky-50 transition"
               >
-                参加申込・協賛・取材のご相談
+                参加申込フォームへ（無料）
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 hover:bg-white/10 transition text-white"
+              >
+                協賛・取材・運営のご相談
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -145,8 +157,8 @@ export default function EventsPage() {
           <h3 className="font-bold text-slate-900 mb-2">参加者・協賛・運営メンバーを募集しています</h3>
           <ul className="text-sm text-slate-700 leading-relaxed space-y-2 list-disc list-inside">
             <li>参加者（中高生・大学生・社会人）：事前登録制で受付中</li>
-            <li>協賛企業：人材アクセス（採用接点）・PR・公式記録掲載などの価値提供</li>
-            <li>運営ボランティア：当日運営・準備リハーサル（5/27〜6/20）への参画</li>
+            <li>応援企業・団体：公式記録挑戦の応援者として社名・ロゴをHP・認定書・配布物に掲載（採用接点の提供は行いません）</li>
+            <li>運営ボランティア：当日運営・準備リハーサル（6/12〜6/27）への参画</li>
             <li>取材・メディア：当日撮影／事前取材のご相談</li>
           </ul>
           <div className="mt-5">

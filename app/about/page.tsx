@@ -43,32 +43,32 @@ export default function AboutPage() {
           屋外での本物の挑戦と仲間との同期体験を通じて、参加者の血肉にする。
         </p>
 
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-16 mb-6">代表挨拶</h2>
-        <div className="mb-6">
-          <PhotoFrame
-            aspect="portrait"
-            src="/representative.png"
-            caption={`代表 ${siteConfig.org.representative}`}
-            prompt={`【プロンプト】屋外、初夏の青空を背景にした代表 堀田の上半身ポートレート。
-腕を組んで少しだけ斜めに立ち、口角を上げた自然な笑顔でカメラを真っ直ぐ見る。
-逆光気味の自然光が髪と肩に当たって輪郭を作り、カジュアルな白シャツ、誠実さと挑戦者の眼差し。
-3/4縦長構図、ナショジオ人物写真調、「この人と一緒に何かやりたい」と思わせる人物写真。`}
-            className="max-w-xs mx-auto"
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-16 mb-6">代表 堀田亮について</h2>
+        <div className="flex flex-col sm:flex-row gap-8 items-start">
+          {/* 実写真 */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hotta-representative.png"
+            alt="青空教室 代表 堀田亮"
+            className="w-40 h-40 rounded-2xl object-cover shrink-0 shadow-md"
           />
-        </div>
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
-          <p className="text-slate-700 leading-relaxed">
-            私が中高生のときに本当に欲しかったのは、教科書でも参考書でもなく、
-            「自分の頭で考え抜いた経験」と「それを一緒にやってくれる仲間」でした。
-          </p>
-          <p className="mt-4 text-slate-700 leading-relaxed">
-            青空教室は、その2つを同時に提供する場として始まりました。
-            2026年6月21日、256人（＝1バイト）の仲間と一緒に、世界最大級の「人間二進数乗算機」を立ち上げます。
-            参加してくれた一人ひとりに「ここで人生が変わった」と言ってもらえる体験を、本気でつくります。
-          </p>
-          <p className="mt-6 font-semibold text-slate-900">
-            学生団体「青空教室」代表　{siteConfig.org.representative}
-          </p>
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 flex-1">
+            <p className="text-slate-700 leading-relaxed">
+              私が中高生のときに本当に欲しかったのは、教科書でも参考書でもなく、
+              「自分の頭で考え抜いた経験」と「それを一緒にやってくれる仲間」でした。
+            </p>
+            <p className="mt-4 text-slate-700 leading-relaxed">
+              サイエンスって、教室で「見る」ものじゃなくて、体を動かして「感じる」ものだと思う。
+              256人が1ビットになって、本物の計算機を人間で動かせたとき——そのワクワクを、
+              ひとりでも多くの人に持ち帰ってほしい。それだけを考えてこの企画をつくっています。
+            </p>
+            <p className="mt-4 text-slate-700 leading-relaxed">
+              2026年6月28日、東京理科大学 野田キャンパスで、一緒に「動かす側」に立ちましょう。
+            </p>
+            <p className="mt-6 font-semibold text-slate-900">
+              学生団体「青空教室」代表　堀田亮
+            </p>
+          </div>
         </div>
 
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-16 mb-6">団体概要</h2>

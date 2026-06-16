@@ -11,7 +11,7 @@ export default function ContactPage() {
           <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3">CONTACT</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900">お問い合わせ・参加申込</h1>
           <p className="mt-5 text-lg text-slate-700 max-w-2xl">
-            2026年6月21日（日）開催の参加申込、協賛・取材のご相談、運営参画のご希望など、すべて以下の窓口から承ります。
+            2026年6月28日（日）東京理科大学 野田キャンパス開催の参加申込、協賛・取材のご相談、運営参画のご希望など、すべて以下の窓口から承ります。
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function ContactPage() {
             参加申込フォーム（事前登録制）
           </h2>
           <p className="text-slate-700 leading-relaxed text-sm mb-5">
-            6/21当日に参加される方は、まずこちらのフォームから事前登録をお願いします。中高生・大学生・社会人どなたでも参加可能です。
+            6/28当日に参加される方は、まずこちらのフォームから事前登録をお願いします。中高生・大学生・社会人どなたでも参加可能です。
           </p>
           <a
             href="https://forms.gle/aS9pkcvqk8a2GEkr5"
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <ul className="space-y-3 text-slate-700">
             {[
               "参加申込（中高生・大学生・社会人／事前登録制）",
-              "協賛・パートナーシップのご相談（人材アクセス・PR・公式記録掲載）",
+              "応援・協賛のご相談（社名・ロゴの記録掲載など）",
               "取材・メディア掲載のご依頼",
               "教員・保護者からのご質問",
               "団体への参画・運営ボランティアのご希望",
