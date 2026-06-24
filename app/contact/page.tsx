@@ -1,7 +1,7 @@
 import { Mail, MessageCircle, FileText, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
-export const metadata = { title: "お問い合わせ・参加申込" };
+export const metadata = { title: "お問い合わせ" };
 
 export default function ContactPage() {
   return (
@@ -9,33 +9,36 @@ export default function ContactPage() {
       <section className="bg-gradient-to-b from-sky-50 to-white border-b border-slate-200">
         <div className="mx-auto max-w-6xl px-5 py-20">
           <p className="text-sky-700 font-semibold text-sm tracking-widest mb-3">CONTACT</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">お問い合わせ・参加申込</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">お問い合わせ</h1>
           <p className="mt-5 text-lg text-slate-700 max-w-2xl">
-            2026年6月28日（日）東京理科大学 野田キャンパス開催の参加申込、協賛・取材のご相談、運営参画のご希望など、すべて以下の窓口から承ります。
+            ※当初予定していた 2026年6月28日（日）の本番は中止としました。続報・協賛・取材・運営参画のご相談は、以下の窓口から承ります。
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-5 py-16 space-y-6">
-        {/* 参加申込フォーム（一次窓口） */}
-        <div className="rounded-2xl bg-white border-2 border-sky-200 p-8 md:p-10">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sky-600 text-white mb-4">
+        {/* 中止のお知らせ（最上部） */}
+        <div className="rounded-2xl bg-rose-50 border-2 border-rose-300 p-8 md:p-10">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-rose-500 text-white mb-4">
             <FileText className="w-6 h-6" />
           </div>
-          <p className="text-xs font-bold text-sky-700 tracking-widest mb-2">STEP 1｜参加申込</p>
+          <p className="text-xs font-bold text-rose-700 tracking-widest mb-2">参加申込の受付について</p>
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-            参加申込フォーム（事前登録制）
+            参加申込の受付は一旦停止しています
           </h2>
+          <p className="text-slate-700 leading-relaxed text-sm mb-3">
+            会場（東京理科大学 野田キャンパス）が使用不可となったため、2026年6月28日（日）の本番は中止としました。
+          </p>
           <p className="text-slate-700 leading-relaxed text-sm mb-5">
-            6/28当日に参加される方は、まずこちらのフォームから事前登録をお願いします。中高生・大学生・社会人どなたでも参加可能です。
+            2026年8月下旬での再開催に向けて準備中です。日程・会場が確定次第、改めて事前登録の受付を開始します。LINEオープンチャットで最初にお知らせしますので、続報を希望される方はぜひご参加ください。
           </p>
           <a
-            href={siteConfig.links.applicationForm}
+            href={siteConfig.links.lineGroup}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-semibold hover:bg-sky-700 transition"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition"
           >
-            参加申込フォームを開く
+            LINEオープンチャットで続報を受け取る
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -89,7 +92,7 @@ export default function ContactPage() {
           <h2 className="text-xl font-bold text-slate-900 mb-4">お問い合わせの種類</h2>
           <ul className="space-y-3 text-slate-700">
             {[
-              "参加申込（中高生・大学生・社会人／事前登録制）",
+              "再開催（2026年8月下旬予定）への参加意向のご相談",
               "応援・協賛のご相談（社名・ロゴの記録掲載など）",
               "取材・メディア掲載のご依頼",
               "教員・保護者からのご質問",

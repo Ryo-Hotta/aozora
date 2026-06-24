@@ -106,21 +106,12 @@ export default function ActivitiesPage() {
 
         <div className="mt-10 rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-sky-100 p-8 md:p-10 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            6月28日、野田キャンパスで一緒に動かしましょう。
+            8月下旬の再開催に向けて、続報をお届けします。
           </h2>
           <p className="mt-3 text-slate-600">
-            参加費 無料｜事前登録制｜中高生・大学生・社会人どなたでも
+            ※6月28日の本番は中止としました｜参加費 無料｜事前登録制（再開時に改めて受付）
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <a
-              href={siteConfig.links.applicationForm}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-semibold hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
-            >
-              参加申込フォームへ（無料）
-              <ArrowRight className="w-4 h-4" />
-            </a>
             <a
               href={siteConfig.links.lineGroup}
               target="_blank"
@@ -128,7 +119,7 @@ export default function ActivitiesPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/20"
             >
               <MessageCircle className="w-4 h-4" />
-              オープンチャットに参加
+              LINEオープンチャットで続報を受け取る
             </a>
             <Link
               href="/contact"

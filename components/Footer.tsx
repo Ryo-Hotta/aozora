@@ -31,16 +31,6 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-slate-600">
             <li>
               <a
-                href={siteConfig.links.applicationForm}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-sky-700"
-              >
-                参加申込フォーム
-              </a>
-            </li>
-            <li>
-              <a
                 href={siteConfig.links.lineGroup}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -48,6 +38,9 @@ export default function Footer() {
               >
                 オープンチャット「{siteConfig.links.lineGroupName}」
               </a>
+            </li>
+            <li className="text-xs text-slate-500">
+              ※6/28本番は中止。8月下旬再開催に向けて準備中。
             </li>
             <li>
               <a href={`mailto:${siteConfig.email}`} className="hover:text-sky-700">

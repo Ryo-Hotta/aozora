@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { Calendar, MapPin, Users, Trophy, ArrowRight, JapaneseYen, MessageCircle } from "lucide-react";
+import { Calendar, MapPin, Users, Trophy, ArrowRight, JapaneseYen, MessageCircle, AlertTriangle } from "lucide-react";
 import { PhotoFrame } from "@/components/PhotoFrame";
 import { DiagramFrame } from "@/components/DiagramFrame";
-import { Countdown } from "@/components/Countdown";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata = { title: "開催情報" };
@@ -18,18 +17,70 @@ export default function EventsPage() {
             サイエンスを"見る"のではなく、自分の体で"動かす"側に回れる1日。
           </p>
           <p className="mt-4 text-lg text-slate-700 max-w-2xl">
-            2026年6月28日（日）、東京理科大学 野田キャンパス（屋外メイン／雨天時は屋内）で1日完結型のイベントを開催します。事前登録制での参加申込を受け付けています。
+            ※当初予定していた 2026年6月28日（日）の本番は中止としました。2026年8月下旬での再開催に向けて、日程・会場・運営体制を再調整中です。確定次第このページとLINEオープンチャットでお知らせします。
           </p>
         </div>
       </section>
 
-      {/* Featured */}
-      <section className="mx-auto max-w-6xl px-5 py-16">
-        <div className="rounded-3xl bg-gradient-to-br from-sky-900 to-sky-700 text-white p-10 md:p-14 relative overflow-hidden">
+      {/* 中止のお知らせ詳細 */}
+      <section className="mx-auto max-w-4xl px-5 pt-12 pb-4">
+        <div className="rounded-2xl bg-rose-50 border-2 border-rose-300 p-7 md:p-9">
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 w-12 h-12 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs font-bold tracking-widest text-rose-700 mb-2">CANCELLED｜開催中止のお知らせ</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-snug">
+                2026年6月28日（日）の本番は中止しました
+              </h2>
+              <div className="mt-5 space-y-3 text-slate-700 leading-relaxed">
+                <p>
+                  会場としていた東京理科大学 野田キャンパスで、現在、通常の授業自体が行えない状況が発生しており、学外イベントとしての利用も不可となりました。
+                </p>
+                <p>
+                  直前まで運河駅周辺の代替会場（公民館・コミュニティセンター等）の確保に動きましたが、6/28に300人規模を受け入れられる会場を押さえることができなかったため、6月28日の開催は見送る判断をしました。
+                </p>
+                <p>
+                  楽しみにしてくださっていたみなさん、本当に申し訳ありません。
+                </p>
+                <p className="font-semibold text-slate-900">
+                  企画自体は止めません。<span className="text-rose-700">2026年8月下旬</span>での再開催に向けて、いま動き始めています。新しい日程・会場が決まり次第、LINEオープンチャットで最初にお知らせします。
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href={siteConfig.links.lineGroup}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 text-white text-sm font-semibold hover:bg-emerald-600 transition"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  LINEオープンチャットで続報を受け取る
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-300 text-slate-700 text-sm font-semibold hover:bg-slate-50 transition"
+                >
+                  お問い合わせ
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 企画情報（参考） */}
+      <section className="mx-auto max-w-6xl px-5 py-12">
+        <p className="text-xs text-slate-500 mb-4 tracking-wider">
+          ※以下は当初 6/28 に予定していた企画の内容です。8月下旬の再開催も同じ企画コンセプトで実施予定のため、参考としてそのまま掲載しています。
+        </p>
+        <div className="rounded-3xl bg-gradient-to-br from-sky-900 to-sky-700 text-white p-10 md:p-14 relative overflow-hidden opacity-90">
           <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-sky-400/20 blur-3xl" />
           <div className="relative">
             <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wider">
-              UPCOMING EVENT
+              企画コンセプト（再開催も同内容）
             </span>
             <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">
               256人で挑む、<br />世界最大級の人間二進数乗算機
@@ -44,7 +95,7 @@ export default function EventsPage() {
                 aspect="video"
                 src="/event-venue.png"
                 caption="本番イメージ：256人による人間二進数乗算機"
-                prompt={`【プロンプト】真夏の青空、東京理科大学野田キャンパスの広場。
+                prompt={`【プロンプト】真夏の青空、屋外広場。
 16×16の格子に整列する256人が、たった今「演算開始」の合図で一斉に旗を振り上げた瞬間。
 黒旗（=1）と白旗（=0）が市松模様のように広場を埋め尽くし、布が風になびいて統一されたパターンを描く。広場の縁には32本のプラカード（2⁰〜2³¹）が扇状に並ぶ。
 中央には白衣の数学者証人とスーツ姿の認定員がストップウォッチを構え、周囲には観衆と報道カメラ。
@@ -55,11 +106,12 @@ export default function EventsPage() {
 
             <div className="mt-10 grid sm:grid-cols-2 gap-5">
               {[
-                { icon: Calendar, label: "開催日", value: "2026年6月28日（日）｜1日完結型" },
-                { icon: MapPin, label: "開催地", value: "東京理科大学 野田キャンパス（屋外メイン／雨天時は屋内に切替）" },
-                { icon: Users, label: "規模", value: "総勢300人規模（演算コア256人＋運営・観客）" },
-                { icon: JapaneseYen, label: "参加費", value: "無料（事前登録制）" },
+                { icon: Calendar, label: "開催日", value: "2026年8月下旬（調整中）／1日完結型" },
+                { icon: MapPin, label: "開催地", value: "再調整中（屋外メイン／雨天時は屋内に切替）" },
+                { icon: Users, label: "規模", value: "総勢300人規模(演算コア256人＋運営・観客)" },
+                { icon: JapaneseYen, label: "参加費", value: "無料（事前登録制／再開時に改めて受付）" },
                 { icon: Trophy, label: "挑戦内容", value: "世界最大級の人間二進数乗算機（256人・16bit × 16bit・Wallace tree方式）" },
+                { icon: AlertTriangle, label: "ステータス", value: "6/28は中止／8月下旬リスケに向け準備中" },
               ].map((i) => (
                 <div key={i.label} className="flex gap-4">
                   <div className="shrink-0 w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center">
@@ -73,19 +125,7 @@ export default function EventsPage() {
               ))}
             </div>
 
-            <div className="mt-8 inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-amber-300/20 border border-amber-200/40 text-amber-100 font-semibold">
-              <Countdown targetDate={siteConfig.event.date} />
-            </div>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <a
-                href={siteConfig.links.applicationForm}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-sky-700 font-semibold hover:bg-sky-50 transition"
-              >
-                参加申込フォームへ（無料）
-                <ArrowRight className="w-4 h-4" />
-              </a>
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href={siteConfig.links.lineGroup}
                 target="_blank"
@@ -93,7 +133,7 @@ export default function EventsPage() {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition"
               >
                 <MessageCircle className="w-4 h-4" />
-                オープンチャットに参加
+                LINEオープンチャットで続報を受け取る
               </a>
               <Link
                 href="/contact"
@@ -115,7 +155,7 @@ export default function EventsPage() {
       <section className="mx-auto max-w-4xl px-5 py-16">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">プログラム構成（概要）</h2>
         <p className="text-sm text-slate-500 mb-8">
-          1日完結・2ステップ。詳細タイムスケジュールは事前登録者へ別途ご案内します。
+          1日完結・2ステップ。詳細タイムスケジュールは再開時に事前登録者へ別途ご案内します。
         </p>
         <div className="space-y-8">
           {[
@@ -168,12 +208,12 @@ export default function EventsPage() {
       {/* Notice */}
       <section className="mx-auto max-w-4xl px-5 pb-24">
         <div className="rounded-2xl bg-sky-50 border border-sky-100 p-7">
-          <h3 className="font-bold text-slate-900 mb-2">参加者・協賛・運営メンバーを募集しています</h3>
+          <h3 className="font-bold text-slate-900 mb-2">応援・協賛・取材・運営メンバーの募集について</h3>
           <ul className="text-sm text-slate-700 leading-relaxed space-y-2 list-disc list-inside">
-            <li>参加者（中高生・大学生・社会人）：事前登録制で受付中</li>
+            <li>参加者（中高生・大学生・社会人）：8月下旬の再開催確定後、改めて事前登録の受付を開始します。LINEオープンチャットで最初にお知らせします</li>
             <li>応援企業・団体：公式記録挑戦の応援者として社名・ロゴをHP・認定書・配布物に掲載（採用接点の提供は行いません）</li>
-            <li>運営ボランティア：当日運営・準備リハーサル（〜6/27）への参画</li>
-            <li>取材・メディア：当日撮影／事前取材のご相談</li>
+            <li>運営ボランティア：8月下旬の本番に向けた準備・当日運営への参画</li>
+            <li>取材・メディア：再開催に向けた事前取材／当日撮影のご相談</li>
           </ul>
           <div className="mt-5">
             <Link

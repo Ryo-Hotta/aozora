@@ -65,7 +65,7 @@ export default function AboutPage() {
               ひとりでも多くの人に持ち帰ってほしい。それだけを考えてこの企画をつくっています。
             </p>
             <p className="mt-4 text-slate-700 leading-relaxed">
-              2026年6月28日、東京理科大学 野田キャンパスで、一緒に「動かす側」に立ちましょう。
+              2026年8月下旬（再開催調整中）、一緒に「動かす側」に立ちましょう。
             </p>
             <p className="mt-6 font-semibold text-slate-900">
               学生団体「青空教室」代表　堀田亮
@@ -92,21 +92,12 @@ export default function AboutPage() {
 
         <div className="mt-16 rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-sky-100 p-8 md:p-10 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            6月28日、野田キャンパスで一緒に動かしましょう。
+            8月下旬の再開催に向けて、続報をお届けします。
           </h2>
           <p className="mt-3 text-slate-600">
-            まずはオープンチャットで準備の裏側や残り日数をお届けします。
+            ※6月28日の本番は中止としました。LINEオープンチャットで準備の裏側と新しい日程をお知らせします。
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <a
-              href={siteConfig.links.applicationForm}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sky-600 text-white font-semibold hover:bg-sky-700 transition shadow-lg shadow-sky-600/20"
-            >
-              参加申込フォームへ（無料）
-              <ArrowRight className="w-4 h-4" />
-            </a>
             <a
               href={siteConfig.links.lineGroup}
               target="_blank"
@@ -114,7 +105,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/20"
             >
               <MessageCircle className="w-4 h-4" />
-              オープンチャットに参加
+              LINEオープンチャットで続報を受け取る
             </a>
             <Link
               href="/contact"

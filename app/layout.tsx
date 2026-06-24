@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { CancelBanner } from "@/components/CancelBanner";
 import { siteConfig } from "@/data/siteConfig";
 import "./globals.css";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className="min-h-screen flex flex-col">
         <Header />
+        <CancelBanner />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
